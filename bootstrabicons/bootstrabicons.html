@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap icons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="bootstrabicons.css">
+    <script src="https://kit.fontawesome.com/66944bb815.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-light">
+    <nav class="navbar fixed-top shadow">
+        <div class="container-fluid">
+            <div>
+                <a href="../index.html"><img src="../imgs/logo.png" alt="logo" /></a>
+                <a class="navbar-brand" href="../index.html">Nice Admin</a>
+            </div>
+
+            <div id="center-nav" class="d-flex">
+                <button
+                    class="navbar-toggler"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    id="hamburger-icon"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="d-flex">
+                    <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Search"
+                        id="input-center-nav"
+                    />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </form>
+            </div>
+            <div
+                id="right-nav"
+                class="d-flex align-items-center gap-4"
+            >
+                <i class="fa-solid fa-bell text-primary fs-4"></i>
+                <i class="fa-solid fa-message text-success fs-4"></i>
+                <div>
+                    <span
+                        class="dropdown-toggle d-flex align-items-center me-3 gap-3"
+                        data-bs-toggle="dropdown"
+                    >
+                        <img
+                            id="profile-img"
+                            src="../imgs/profile-img.jpg"
+                            alt="profile"
+                            class="rounded-circle"
+                        />
+                        <p id="profile-name">k.Anderson</p>
+                    </span>
+                    <ul
+                        class="dropdown-menu dropdown-menu-end dropdown-menu-light me-3"
+                    >
+                        <li class="text-center">
+                            <h5 id="profile-name">Kevin Anderson</h5>
+                            <p>Web Designer</p>
+                        </li>
+                        <li>
+                            <a class="dropdown-item fs-5" href="../profile/profile.html"
+                                >My Profile</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item fs-5" href="../profile/profile.html"
+                                >Account Settings</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item fs-5" href="../faq/faq.html"
+                                >Need Help?</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item fs-5" href="#"
+                                >Sign Out</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="offcanvas offcanvas-start shadow show"
+                id="offcanvasNavbar"
+            >
+                <div class="offcanvas-body">
+                    <div class="accordion" id="accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button not-accordion"
+                                >
+                                    <a
+                                        href="../index.html"
+                                        class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3 color"
+                                        ><h5><i class="fa-solid fa-table-cells-large"></i></h5><h5>Dashboard</h5></a
+                                    >
+                                </button>
+                            </h2>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed d-flex align-items-center justify-content-start gap-3 color"
+                                    data-bs-target="#accordion-one"
+                                    data-bs-toggle="collapse"
+                                >
+                                <h5><i class="fa-regular fa-chart-bar"></i></h5>
+                                <h5>components</h5>    
+                                </button>
+                            </h2>
+                            <ul
+                                class="accordion-collapse collapse"
+                                id="accordion-one"
+                                data-bs-parent="#accordion"
+                            >
+                                <li class="py-3"><a href="../alert/alert.html" class="nav-link color">Alerts</a></li>
+                                <li class="py-3"><a href="../accordions/accordion.html" class="nav-link color">Accordion</a></li>
+                                <li class="py-3"><a href="../badges/badges.html" class="nav-link color ">Badges</a></li>
+                                <li class="py-3"><a href="../bread-crumb/bread-crumb.html" class="nav-link color">Breadcrumbs</a></li>
+                                <li class="py-3"><a href="../buttons/buttons.html" class="nav-link color">buttons</a></li>
+                                <li class="py-3"><a href="../cards/cards.html" class="nav-link color">Cards</a></li>
+                                <li class="py-3"><a href="../carousel/carousel.html" class="nav-link color">Carousel</a></li>
+                                <li class="py-3"><a href="../List-group/List-group.html" class="nav-link color">List group</a></li>
+                                <li class="py-3"><a href="../modal/modal.html" class="nav-link color">Modal</a></li>
+                                <li class="py-3"><a href="../Taps/Taps.html" class="nav-link color">Taps</a></li>
+                                <li class="py-3"><a href="../pagination/pagination.html" class="nav-link color">Pagination</a></li>
+                                <li class="py-3"><a href="../progress/progress.html" class="nav-link color">Progress</a></li>
+                                <li class="py-3"><a href="../spinners/spinners.html" class="nav-link color">Spinners</a></li>
+                                <li class="py-3"><a href="../tooltips/tooltips.html" class="nav-link color">Tooltips</a></li>
+                            </ul>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#accordion-two"
+                                >
+                                    <h5><i class="fa-regular fa-address-card"></i></h5>
+                                    <h5>Forms</h5>
+                                </button>
+                            </h2>
+
+                            <ul
+                                id="accordion-two"
+                                data-bs-parent="#accordion"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#accordion"
+                            >
+                                <li class="py-3">
+                                    <a href="../form-editors/form-editors.html" class="nav-link color">Form Editors</a>
+                                </li>
+                                <li class="py-3">
+                                    <a href="../form-layout/form-layout.html" class="nav-link color">Form Layouts</a>
+                                </li>                                        
+                                <li class="py-3">
+                                    <a href="../form-elements/form-elements.html" class="nav-link color">Form Elements</a>   
+                                </li>
+                                <li class="py-3">
+                                    <a href="../form-validate/form-validate.html" class="nav-link color">Form validation</a>   
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#accordion-three"
+                                >
+                                    <h5><i class="fa-solid fa-table-list"></i></h5>
+                                    <h5>Tables</h5>
+                                </button>
+                            </h2>
+                            <ul
+                                id="accordion-three"
+                                data-bs-parent="#accordion"
+                                class="accordion-collapse collapse"
+                            >
+                                <li class="py-3">
+                                    <a href="../general-table/general-table.html" class="nav-link color">General Tables</a>
+                                </li>
+                                <li class="py-3">
+                                    <a href="../data-table/data-table.html" class="nav-link color">Data Tables</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#accordion-four"
+                                >
+                                    
+                                    <h5><i class="fa-solid fa-chart-pie"></i></h5>
+                                    <h5>Charts</h5>
+                                </button>
+                            </h2>
+                            <ul
+                                id="accordion-four"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#accordion"
+                            >
+                                <li class="py-3"><a href="../charts/chart-js.html" class="nav-link color">Chart.js</a></li>
+                                <li class="py-3"><a href="../apex-charts/apex-charts.html" class="nav-link color">Apex Charts</a></li>
+                                <li class="py-3"><a href="../echart/echart.html" class="nav-link color">EChart</a></li>
+                            </ul>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-start align-items-start gap-3"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#accordion-five"
+                                >
+                                    
+                                    <h5><i class="fa-solid fa-icons"></i></h5>
+                                    <h5>Icons</h5>
+                                </button>
+                            </h2>
+                            <ul
+                                class="collapse accordion-collapse"
+                                data-bs-parent="accordion"
+                                id="accordion-five"
+                            >
+                                    <li class="py-3">
+                                        <a href="../bootstrabicons/bootstrabicons.html" class="nav-link color">Bootstrab Icons</a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="../remix-icons/remix-icons.html" class="nav-link color">Remix Icons</a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="../box-icons/box-icons.html" class="nav-link color">Box Icons</a>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>pages</p>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button not-accordion">
+                                    <a
+                                            href="../profile/profile.html"
+                                            class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                            ><h5><i class="fa-regular fa-user"></i></h5><h5>profile</h5></a
+                                        >
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button not-accordion">
+                                    <a
+                                            href="../faq/faq.html"
+                                            class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                            ><h5><i class="fa-regular fa-circle-question"></i></h5><h5>F . A . Q</h5></a
+                                        >
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button not-accordion">
+                                    <a
+                                            href="../contact/contact.html"
+                                            class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                            ><h5><i class="fa-regular fa-envelope"></i></h5><h5>Contact</h5></a
+                                        >
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button not-accordion">
+                                    <a
+                                            href="../register/register.html"
+                                            class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                            ><h5><i class="fa-regular fa-rectangle-list"></i></h5><h5>Register</h5></a
+                                        >
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button not-accordion">
+                                    <a
+                                            href="../log-in/log-in.html"
+                                            class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                            ><h5><i class="fa-solid fa-right-to-bracket"></i><h5>Log In</h5></a
+                                        >
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button not-accordion">
+                                    <a
+                                            href="../error 404/error404.html"
+                                            class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                            ><h5><i class="fa-solid fa-triangle-exclamation"></i><h5>Error 404</h5></a
+                                        >
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button not-accordion">
+                                    <a
+                                            href="blank/blank.html"
+                                            class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                            ><h5><i class="fa-regular fa-file"></i><h5>Blank</h5></a
+                                        >
+                                </button>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="fixing-nav"></div>
+
+    <h1>Bootstrab Icons</h1>
+        <nav style="--bs-breadcrumb-divider: '/'" aria-label="breadcrumb">
+            <ol class="breadcrumb bg-light">
+                <li class="breadcrumb-item">
+                    <a class="bread-crumb-not-active" href="../index.html"
+                        >Home</a
+                    >
+                </li>
+                <li class="breadcrumb-item">
+                    <a class="text-decoration-none">Icons</a>
+                </li>
+                <li class="breadcrumb-item active">Bootstrab Icons</li>
+            </ol>
+            </nav>
+            <p>Use the following pattern to add the Bootstrap icons to anywhere in your project. <i class="bi alarm-fille"></i> Replace the bold part with the below icon names. Check the Official website for more info.            </p>
+    <div class="container-lg ">
+        <div class="icon-container bg-light" id="icons"></div>
+    </div>
+
+    <script>
+        const icons = [
+    "alarm", "archive", "arrow-down", "arrow-up", "bell", "book", "calendar", "camera", "chat", "clock",
+    "cloud", "code", "cursor", "envelope", "file", "flag", "folder", "gear", "heart", "house",
+    "image", "link", "list", "lock", "map", "mic", "music", "pencil", "phone", "printer",
+    "search", "share", "star", "trash", "upload", "person", "globe", "tools", "trophy", "bag",
+    "airplane", "android", "apple", "bag-check", "bag-plus", "bank", "battery-full", "battery-half", "battery-charging",
+    "bookmark", "briefcase", "brightness-high", "brightness-low", "brush", "bucket", "calculator", "camera-video",
+    "capslock", "card-checklist", "card-heading", "card-image", "card-list", "card-text", "caret-down", "caret-left",
+    "caret-right", "caret-up", "cart", "cart-check", "cart-plus", "cash", "cast", "chat-left", "chat-right", "check",
+    "check-circle", "check-square", "chevron-down", "chevron-left", "chevron-right", "chevron-up", "circle", "circle-half",
+    "clipboard", "clock-history", "cloud-arrow-down", "cloud-arrow-up", "cloud-download", "cloud-upload", "collection",
+    "collection-play", "columns", "command", "compass", "cone", "controller", "cpu", "credit-card", "crop", "cup",
+    "dash", "dash-circle", "diagram-2", "diagram-3", "diamond", "dice-1", "dice-2", "dice-3", "dice-4", "dice-5",
+    "dice-6", "display", "displayport", "distribute-horizontal", "distribute-vertical", "door-closed", "door-open",
+    "droplet", "ear", "earbuds", "egg", "eject", "emoji-angry", "emoji-dizzy", "emoji-expressionless", "emoji-frown",
+    "emoji-heart-eyes", "emoji-laughing", "emoji-neutral", "emoji-smile", "emoji-smile-upside-down", "emoji-sunglasses",
+    "emoji-wink", "envelope-open", "eraser", "exclamation", "exclamation-circle", "exclamation-diamond", "exclamation-octagon",
+    "exclamation-square", "exclamation-triangle", "eye", "eye-slash", "eyeglasses", "file-arrow-down", "file-arrow-up",
+    "file-bar-graph", "file-binary", "file-break", "file-check", "file-code", "file-diff", "file-earmark", "file-earmark-bar-graph",
+    "file-earmark-binary", "file-earmark-break", "file-earmark-check", "file-earmark-code", "file-earmark-diff", "file-earmark-easel",
+    "file-earmark-excel", "file-earmark-font", "file-earmark-image", "file-earmark-lock", "file-earmark-medical", "file-earmark-minus",
+    "file-earmark-music", "file-earmark-pdf", "file-earmark-person", "file-earmark-play", "file-earmark-plus", "file-earmark-post",
+    "file-earmark-ppt", "file-earmark-ruled", "file-earmark-slides", "file-earmark-spreadsheet", "file-earmark-text", "file-earmark-word",
+    "file-earmark-x", "file-earmark-zip", "file-easel", "file-excel", "file-font", "file-image", "file-lock", "file-medical",
+    "file-minus", "file-music", "file-pdf", "file-person", "file-play", "file-plus", "file-post", "file-ppt", "file-ruled",
+    "file-slides", "file-spreadsheet", "file-text", "file-word", "file-x", "file-zip", "files", "film", "filter", "fingerprint",
+    "flag-fill", "flower1", "flower2", "flower3", "folder-check", "folder-fill", "folder-minus", "folder-plus", "folder-symlink",
+    "folder-x", "forward", "front", "fullscreen", "fullscreen-exit", "funnel", "gear-fill", "gem", "gift", "gift-fill", "globe2",
+    "google", "grid", "grid-1x2", "grid-3x2", "grid-3x3", "grid-fill", "hammer", "hand-index", "hand-index-thumb", "hand-thumbs-down",
+    "hand-thumbs-up", "handbag", "hash", "hdd", "hdd-fill", "hdd-network", "hdd-rack", "hdd-stack", "hdmi", "headphones", "headset",
+    "heart-fill", "heart-half", "heptagon", "hexagon", "hourglass", "hourglass-bottom", "hourglass-split", "hourglass-top", "house-door",
+    "house-fill", "hurricane", "image-fill", "images", "inbox", "inbox-fill", "infinity", "info", "info-circle", "info-square",
+    "input-cursor", "input-cursor-text", "instagram", "intersect", "journal", "journal-album", "journal-arrow-down", "journal-arrow-up",
+    "journal-bookmark", "journal-check", "journal-code", "journal-medical", "journal-minus", "journal-plus", "journal-richtext",
+    "journal-text", "journal-x", "kanban", "key", "key-fill", "keyboard", "keyboard-fill", "ladder", "lamp", "laptop", "layer-backward",
+    "layer-forward", "layers", "layers-fill", "layers-half", "layout-sidebar", "layout-sidebar-inset", "layout-sidebar-inset-reverse",
+    "layout-sidebar-reverse", "layout-split", "layout-text-sidebar", "layout-text-sidebar-reverse", "layout-text-window",
+    "layout-text-window-reverse", "layout-three-columns", "layout-wtf", "life-preserver", "lightbulb", "lightbulb-fill", "lightbulb-off",
+    "lightbulb-off-fill", "lightning", "lightning-charge", "lightning-charge-fill", "lightning-fill", "link-45deg", "linkedin",
+    "list-check", "list-columns", "list-columns-reverse", "list-nested", "list-ol", "list-stars", "list-task", "list-ul", "lock-fill",
+    "magic", "magnet", "magnet-fill", "mailbox", "mailbox2", "map-fill", "markdown", "megaphone", "menu-app", "menu-button",
+    "menu-button-fill", "menu-button-wide", "menu-button-wide-fill", "menu-down", "menu-up", "mic-fill", "mic-mute", "mic-mute-fill",
+    "minecart", "minecart-loaded", "moisture", "moon", "moon-fill", "moon-stars", "moon-stars-fill", "mouse", "mouse-fill", "mouse2",
+    "mouse2-fill", "mouse3", "mouse3-fill", "music-note", "music-note-beamed", "music-note-list", "music-player", "newspaper",
+    "node-minus", "node-plus", "nut", "nut-fill", "octagon", "octagon-fill", "option", "outlet", "paint-bucket", "palette", "palette2",
+    "paperclip", "paragraph", "patch-check", "patch-check-fill", "patch-exclamation", "patch-exclamation-fill", "patch-minus",
+    "patch-minus-fill", "patch-plus", "patch-plus-fill", "patch-question", "patch-question-fill", "pause", "pause-fill", "peace",
+    "pen", "pencil", "pencil-fill", "pencil-square", "pentagon", "pentagon-fill", "people", "people-fill", "percent", "person",
+    "person-badge", "person-badge-fill", "person-check", "person-circle", "person-dash", "person-fill", "person-lines-fill",
+    "person-plus", "person-square", "person-x", "phone", "phone-fill", "phone-landscape", "phone-landscape-fill", "phone-vibrate",
+    "phone-vibrate-fill", "pie-chart", "pie-chart-fill", "piggy-bank", "piggy-bank-fill", "pin", "pin-angle", "pin-angle-fill",
+    "pin-fill", "pinterest", "play", "play-fill", "play-circle", "play-circle-fill", "plug", "plus", "plus-circle", "plus-circle-fill",
+    "plus-square", "plus-square-fill", "postage", "postage-fill", "postage-heart", "postage-heart-fill", "printer-fill", "projector",
+    "projector-fill", "puzzle", "puzzle-fill", "question", "question-circle", "question-circle-fill", "question-diamond",
+    "question-diamond-fill", "question-octagon", "question-octagon-fill", "question-square", "question-square-fill", "quote",
+    "radioactive", "rainbow", "receipt", "receipt-cutoff", "receipt-cutoff-fill", "receipt-fill", "reception-0", "reception-1",
+    "reception-2", "reception-3", "reception-4", "record", "record-btn", "record-btn-fill", "record-circle", "record-circle-fill",
+    "record-fill", "recycle", "reddit", "reply", "reply-all", "reply-all-fill", "reply-fill", "rss", "rss-fill", "safe", "safe-fill",
+    "safe2", "safe2-fill", "save", "save-fill", "save2", "save2-fill", "scissors", "screwdriver", "sd-card", "sd-card-fill", "search",
+    "search-heart", "search-heart-fill", "segmented-nav", "send", "send-check", "send-check-fill", "send-dash", "send-dash-fill",
+    "send-fill", "send-plus", "send-plus-fill", "send-slash", "send-slash-fill", "send-x", "send-x-fill", "share", "share-fill",
+    "shield", "shield-check", "shield-exclamation", "shield-fill", "shield-fill-check", "shield-fill-exclamation", "shield-fill-minus",
+    "shield-fill-plus", "shield-fill-x", "shield-lock", "shield-lock-fill", "shield-minus", "shield-plus", "shield-shaded",
+    "shield-slash", "shield-slash-fill", "shield-x", "shift", "shift-fill", "shop", "shop-window", "shuffle", "signal", "signpost",
+    "signpost-2", "signpost-2-fill", "signpost-fill", "signpost-split", "signpost-split-fill", "sim", "sim-fill", "skip-backward",
+    "skip-backward-fill", "skip-end", "skip-end-fill", "skip-forward", "skip-forward-fill", "skip-start", "skip-start-fill", "slack",
+    "slash", "slash-circle", "slash-circle-fill", "slash-lg", "slash-square", "slash-square-fill", "sliders", "sliders2", "sliders2-vertical",
+    "smartwatch", "snow", "snow2", "snow3", "sort-alpha-down", "sort-alpha-down-alt", "sort-alpha-up", "sort-alpha-up-alt", "sort-down",
+    "sort-down-alt", "sort-numeric-down", "sort-numeric-down-alt", "sort-numeric-up", "sort-numeric-up-alt", "sort-up", "sort-up-alt",
+    "soundwave", "speaker", "speaker-fill", "speedometer", "speedometer2", "spellcheck", "spotify", "square", "square-fill", "square-half",
+    "stack", "stack-overflow", "star", "star-fill", "star-half", "stars", "stickies", "stickies-fill", "sticky", "sticky-fill", "stop",
+    "stop-btn", "stop-btn-fill", "stop-circle", "stop-circle-fill", "stop-fill", "stoplights", "stoplights-fill", "stopwatch", "stopwatch-fill",
+    "subtract", "suit-club", "suit-club-fill", "suit-diamond", "suit-diamond-fill", "suit-heart", "suit-heart-fill", "suit-spade", "suit-spade-fill",
+    "sun", "sun-fill", "sunglasses", "sunrise", "sunrise-fill", "sunset", "sunset-fill", "table", "tablet", "tablet-fill", "tablet-landscape",
+    "tablet-landscape-fill", "tag", "tag-fill", "tags", "tags-fill", "telegram", "telephone", "telephone-fill", "telephone-forward",
+    "telephone-forward-fill", "telephone-inbound", "telephone-inbound-fill", "telephone-minus", "telephone-minus-fill", "telephone-outbound",
+    "telephone-outbound-fill", "telephone-plus", "telephone-plus-fill", "telephone-x", "telephone-x-fill", "terminal", "terminal-fill",
+    "text-center", "text-indent-left", "text-indent-right", "text-left", "text-paragraph", "text-right", "textarea", "textarea-resize",
+    "textarea-t", "thermometer", "thermometer-half", "thermometer-high", "thermometer-low", "thermometer-snow", "thermometer-sun",
+    "three-dots", "three-dots-vertical", "thunderbolt", "thunderbolt-fill", "ticket", "ticket-detailed", "ticket-detailed-fill",
+    "ticket-fill", "ticket-perforated", "ticket-perforated-fill", "tiktok", "toggle-off", "toggle-on", "toggle2-off", "toggle2-on",
+    "toggles", "toggles2", "tools", "tornado", "trash", "trash-fill", "trash2", "trash2-fill", "tree", "tree-fill", "triangle",
+    "triangle-fill", "triangle-half", "trophy", "trophy-fill", "truck", "truck-flatbed", "truck-front", "truck-front-fill", "tv",
+    "tv-fill", "twitch", "twitter", "type", "type-bold", "type-h1", "type-h2", "type-h3", "type-h4", "type-h5", "type-h6",
+    "type-italic", "type-strikethrough", "type-underline", "ui-checks", "ui-checks-grid", "ui-radios", "ui-radios-grid", "umbrella",
+    "umbrella-fill", "union", "unlock", "unlock-fill", "upc", "upc-scan", "upload", "vector-pen", "vector-pen-fill", "view-list",
+    "view-stacked", "vimeo", "vinyl", "vinyl-fill", "voicemail", "volume-down", "volume-down-fill", "volume-mute", "volume-mute-fill",
+    "volume-off", "volume-off-fill", "volume-up", "volume-up-fill", "vr", "wallet", "wallet-fill", "wallet2", "wallet2-fill", "watch",
+    "watch-fill", "water", "webcam", "webcam-fill", "whatsapp", "wifi", "wifi-1", "wifi-2", "wifi-off", "window", "window-dock",
+    "window-sidebar", "windows", "wordpress", "wrench", "wrench-adjustable", "wrench-adjustable-circle", "wrench-adjustable-circle-fill",
+    "x", "x-circle", "x-circle-fill", "x-diamond", "x-diamond-fill", "x-lg", "x-octagon", "x-octagon-fill", "x-square", "x-square-fill",
+    "youtube", "zoom-in", "zoom-out"
+];
+
+        const iconContainer = document.getElementById('icons');
+
+        icons.forEach(icon => {
+            const iconItem = document.createElement('div');
+            iconItem.className = 'icon-item shadow';
+            iconItem.innerHTML = `
+                <i class="bi bi-${icon}" style="font-size: 24px;"></i>
+                <div class="mt-2">${icon}</div>
+            `;
+            iconContainer.appendChild(iconItem);
+        });
+        const offcanvas = document.querySelector("#offcanvasNavbar");
+                const body = document.body;
+                
+                offcanvas.addEventListener("show.bs.offcanvas", function () {
+                    body.classList.add("offcanvas-open");
+                    
+                });
+        
+                offcanvas.addEventListener("hide.bs.offcanvas", function () {
+                    body.classList.remove("offcanvas-open");
+                });
+    </script>
+</body>
+</html>

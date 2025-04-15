@@ -1,0 +1,461 @@
+/* *{
+    border: black solid 1px;
+} */
+body{
+    overflow: auto!important;
+
+}
+
+#dataTable{
+    width: 100%;
+    overflow: auto!important;
+    img{
+        width: 100px!important;
+    }
+}
+#tbody{
+    overflow: auto!important;
+}
+.offcanvas-open {
+    margin-left: 24%;
+    transition: margin-left 0.3s ease;
+}
+.datatable-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+#profile-img {
+    height: 50px;
+    width: 50px;
+}
+.offcanvas-start {
+    top: 10% !important;
+    border: none !important;
+    position: fixed;
+    height: 90%;
+    width: 250px; 
+    overflow: auto!important;
+}
+.accordion button{
+    color: rgb(1, 41, 112);
+
+}
+#accordion-one{
+    list-style: circle;
+    li{
+        &:hover{
+            color: #0d6efd;
+        }
+        &::marker{
+            font-size: 1.5rem;
+            font-weight:  lighter;
+        }
+    }
+}
+#accordion-two{
+    list-style: circle;
+    li{
+        &:hover{
+            color: #0d6efd;
+        }
+        &::marker{
+            font-size: 1.5rem;
+            font-weight:  lighter;
+        }
+    }
+}
+#accordion-three{
+    list-style: circle;
+    li{
+        &:hover{
+            color: #0d6efd;
+        }
+        &::marker{
+            font-size: 1.5rem;
+            font-weight:  lighter;
+        }
+    }
+}
+#accordion-four{
+    list-style: circle;
+    li{
+        &:hover{
+            color: #0d6efd;
+        }
+        &::marker{
+            font-size: 1.5rem;
+            font-weight:  lighter;
+        }
+    }
+}
+#accordion-five{
+    list-style: circle;
+    li{
+        &:hover{
+            color: #0d6efd;
+        }
+        &::marker{
+            font-size: 1.5rem;
+            font-weight:  lighter;
+        }
+    }
+}
+.accordion{
+    --bs-accordion-border-color: none;
+    --bs-accordion-border-width: none;
+}
+.accordion-button:not(.collapsed) {
+color: var(--bs-accordion-active-color);
+background-color: white;
+box-shadow: none;
+}
+.accordion-button{
+    background-color: white;
+}
+.accordion-button:focus {
+z-index: 3;
+outline: 0;
+box-shadow: none;
+background-color: rgb(236, 240, 243);
+}
+.accordion-button:hover {
+    background-color: rgb(236, 240, 243);
+}
+.offcanvas-backdrop {
+    display: none !important;
+}
+nav {
+    height: 10%;
+    background-color: white !important;
+    position: sticky;
+}
+#hamburger-icon {
+    border: none !important;
+    outline: none !important;
+}
+.dropdown-toggle {
+    cursor: pointer;
+}
+#input-center-nav {
+    width: 350px;
+}
+.fa-magnifying-glass {
+    position: relative;
+    left: -10%;
+    display: flex;
+    align-self: center;
+}
+.not-accordion:not(.collapsed)::after {
+    background-image: none;
+}
+
+
+.fixing-nav{
+    height: 10vh;
+    width: 100%;
+}
+.chart-height{
+    height: 600px;
+    transition: ease 5.5s;
+}
+main{
+    display: flex;
+    align-items: flex-start;
+    #first-column{
+        width: 65%;
+        .card{
+            border: none;
+            width: 98.7%;
+            .card-header{
+                background-color: white;
+                border-bottom: none;
+            }
+            &:nth-child(1){
+                width: 48%;
+            }
+            &:nth-child(2){
+                width: 48%;
+            }
+        }
+    }
+    #second-column{
+        width: 29%;
+        height: auto;
+        #recent-activities{
+            margin-bottom: 2%;
+            flex-shrink: 1;
+        }
+        
+        .card{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border: none;
+            nav{
+                align-self: flex-start;
+            }
+            .card-header{
+                align-self: flex-start;
+            }
+        }
+    }
+    
+}
+.datatable{
+    width: 100%;
+}
+#dataTable{
+    width: 100%;
+}
+.special-lis{
+    list-style: disc;
+    &::marker{
+        font-size: 1.3rem;    
+    }
+    
+}
+.special-lis-1::marker{
+    color: red;
+    
+}.special-lis-2::marker{
+    color: blue;
+}.special-lis-3::marker{
+    color: green;
+}.special-lis-4::marker{
+    color: blueviolet;
+}.special-lis-5::marker{
+    color: darkgoldenrod;
+}.special-lis-6::marker{
+    color: rgb(0, 238, 255);
+}
+
+@media (max-width : 1440px) {
+    .offcanvas-open{
+        margin-left: 30%;
+    }
+    #profile-name{
+        display: none;
+    }
+    #input-center-nav{
+        width: 200px;
+    }
+    .fa-magnifying-glass{
+        left: -15%;
+    }
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    
+@media (max-width: 1024px) {
+    /* إصلاح تنسيقات second-column */
+    #second-column {
+        width: 100%!important; /* العرض الكامل */
+        display: flex;
+        flex-direction: column; /* الترتيب العمودي */
+        gap: 20px; /* تباعد بين العناصر */
+    }
+    main{
+        display: flex;
+        align-items: flex-start;
+    }
+    #first-column{
+        width: 100%;
+        display: flex;
+        
+        .card{
+            width: 100%;
+        }
+    }
+    /* إصلاح تنسيقات العناصر داخل second-column */
+    #second-column .card {
+        width: 100%!important; /* العرض الكامل */
+        margin-bottom: 20px; /* تباعد بين العناصر */
+        padding: 15px; /* إضافة padding لتحسين المظهر */
+    }
+
+    #second-column #recent-activities {
+        width: 100%; /* العرض الكامل */
+        margin-bottom: 20px; /* تباعد بين العناصر */
+        padding: 15px; /* إضافة padding لتحسين المظهر */
+    }
+    
+    /* إصلاح تنسيقات النصوص داخل العناصر */
+    #second-column .card-body,
+    #second-column .card-header {
+        padding: 10px; /* إضافة padding للنصوص */
+    }
+
+    /* إصلاح تنسيقات breadcrumb */
+    #second-column .breadcrumb {
+        flex-wrap: wrap; /* السماح لفصل العناصر إذا كانت طويلة */
+    }
+
+    /* إصلاح تنسيقات الرسوم البيانية */
+    #second-column canvas {
+        width: 100% !important; /* التأكد من أن الرسوم البيانية تأخذ العرض الكامل */
+    }
+}
+@media (max-width : 768px) {
+    main{
+        #first-column{
+            width: 100%;
+            .card{
+                width: 100%;
+            }
+            #offcanvas-space{
+                display: none;
+            }
+            
+        }
+        #second-column{
+            width: 100%;
+            
+            #recent-activities{
+                width: 100%;
+            }
+        }
+    }
+    
+    
+    #input-center-nav{
+        display: none;
+    }
+    nav img{
+        width: 25px;
+    }
+    .navbar-brand{
+        display: none;
+    }
+    #right-nav{
+        img{
+            width: 35px;
+            height: 35px;
+        }
+    }
+    .offcanvas-open{
+        margin: 0;
+    }
+    #profile-name{
+        display: none;
+    }
+}
+@media (max-width : 425px) {
+    body .offcanvas-start{
+        width: 100%;
+    }
+    main{
+        width: 100%;
+        #first-column{
+            width: 100%;
+            .card{
+                width: 100%;
+                &:nth-child(1){
+                    width: 100%;
+                }
+                &:nth-child(2){
+                    width: 100%;
+                }
+            }
+            #offcanvas-space{
+                display: none;
+            }
+        }
+        #second-column{
+            width: 100%;
+            margin-top: 10%;
+            #recent-activities{
+                width: 100%;
+            }
+        }
+    }
+    
+    
+    #input-center-nav{
+        display: none;
+    }
+    nav img{
+        width: 25px;
+    }
+    .navbar-brand{
+        display: none;
+    }
+    #right-nav{
+        img{
+            width: 35px;
+            height: 35px;
+        }
+    }
+    .offcanvas-open{
+        margin: 0;
+    }
+    #profile-name{
+        display: none;
+    }
+}
+@media (max-width : 320px) {
+    
+    main{
+        display: flex;
+        align-items: center;
+        
+        #first-column{
+            
+            width: 100%;
+            .card{
+                width: 100%;
+            }
+            #offcanvas-space{
+                display: none;
+            }
+            .chart-height{
+                height: auto;
+            }
+        }
+        #second-column{
+            width: 100%;
+            margin-top: 10%;
+            #recent-activities{
+                width: 100%;
+            }
+        }
+    }
+    
+    
+    #input-center-nav{
+        display: none;
+    }
+    nav img{
+        width: 25px;
+    }
+    .navbar-brand{
+        display: none;
+    }
+    #right-nav{
+        img{
+            width: 35px;
+            height: 35px;
+        }
+    }
+    .offcanvas-open{
+        margin: 0;
+    }
+    #profile-name{
+        display: none;
+    }
+}
+}#dataTable{
+    
+    width: 100%;
+    overflow: auto!important;
+    img{
+        width: 100px!important;
+    }
+}
+#tbody{
+    overflow: auto!important;
+}

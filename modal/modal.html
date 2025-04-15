@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Modal</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://kit.fontawesome.com/66944bb815.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="modal.css" />
+    </head>
+    <body class="bg-light">
+        <nav class="navbar fixed-top shadow">
+            <div class="container-fluid">
+                <div>
+                    <a href="../index.html"><img src="../imgs/logo.png" alt="logo" /></a>
+                    <a class="navbar-brand" href="../index.html">Nice Admin</a>
+                </div>
+
+                <div id="center-nav" class="d-flex">
+                    <button
+                        class="navbar-toggler"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar"
+                        id="hamburger-icon"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <form class="d-flex">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            id="input-center-nav"
+                        />
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </form>
+                </div>
+                <div
+                    id="right-nav"
+                    class="d-flex align-items-center gap-4"
+                >
+                    <i class="fa-solid fa-bell text-primary fs-4"></i>
+                    <i class="fa-solid fa-message text-success fs-4"></i>
+                    <div>
+                        <span
+                            class="dropdown-toggle d-flex align-items-center me-3 gap-3"
+                            data-bs-toggle="dropdown"
+                        >
+                            <img
+                                id="profile-img"
+                                src="../imgs/profile-img.jpg"
+                                alt="profile"
+                                class="rounded-circle"
+                            />
+                            <p id="profile-name">k.Anderson</p>
+                        </span>
+                        <ul
+                            class="dropdown-menu dropdown-menu-end dropdown-menu-light me-3"
+                        >
+                            <li class="text-center">
+                                <h5 id="profile-name">Kevin Anderson</h5>
+                                <p>Web Designer</p>
+                            </li>
+                            <li>
+                                <a class="dropdown-item fs-5" href="../profile/profile.html"
+                                    >My Profile</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item fs-5" href="../profile/profile.html"
+                                    >Account Settings</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item fs-5" href="../faq/faq.html"
+                                    >Need Help?</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item fs-5" href="#"
+                                    >Sign Out</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="offcanvas offcanvas-start shadow show"
+                    id="offcanvasNavbar"
+                >
+                    <div class="offcanvas-body">
+                        <div class="accordion" id="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button not-accordion"
+                                    >
+                                        <a
+                                            href="../index.html"
+                                            class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3 color"
+                                            ><h5><i class="fa-solid fa-table-cells-large"></i></h5><h5>Dashboard</h5></a
+                                        >
+                                    </button>
+                                </h2>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed d-flex align-items-center justify-content-start gap-3 color"
+                                        data-bs-target="#accordion-one"
+                                        data-bs-toggle="collapse"
+                                    >
+                                    <h5><i class="fa-regular fa-chart-bar"></i></h5>
+                                    <h5>components</h5>    
+                                    </button>
+                                </h2>
+                                <ul
+                                    class="accordion-collapse collapse"
+                                    id="accordion-one"
+                                    data-bs-parent="#accordion"
+                                >
+                                    <li class="py-3"><a href="../alert/alert.html" class="nav-link color">Alerts</a></li>
+                                    <li class="py-3"><a href="../accordions/accordion.html" class="nav-link color">Accordion</a></li>
+                                    <li class="py-3"><a href="../badges/badges.html" class="nav-link color ">Badges</a></li>
+                                    <li class="py-3"><a href="../bread-crumb/bread-crumb.html" class="nav-link color">Breadcrumbs</a></li>
+                                    <li class="py-3"><a href="../buttons/buttons.html" class="nav-link color">buttons</a></li>
+                                    <li class="py-3"><a href="../cards/cards.html" class="nav-link color">Cards</a></li>
+                                    <li class="py-3"><a href="../carousel/carousel.html" class="nav-link color">Carousel</a></li>
+                                    <li class="py-3"><a href="../List-group/List-group.html" class="nav-link color">List group</a></li>
+                                    <li class="py-3"><a href="../modal/modal.html" class="nav-link color">Modal</a></li>
+                                    <li class="py-3"><a href="../Taps/Taps.html" class="nav-link color">Taps</a></li>
+                                    <li class="py-3"><a href="../pagination/pagination.html" class="nav-link color">Pagination</a></li>
+                                    <li class="py-3"><a href="../progress/progress.html" class="nav-link color">Progress</a></li>
+                                    <li class="py-3"><a href="../spinners/spinners.html" class="nav-link color">Spinners</a></li>
+                                    <li class="py-3"><a href="../tooltips/tooltips.html" class="nav-link color">Tooltips</a></li>
+                                </ul>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#accordion-two"
+                                    >
+                                        <h5><i class="fa-regular fa-address-card"></i></h5>
+                                        <h5>Forms</h5>
+                                    </button>
+                                </h2>
+
+                                <ul
+                                    id="accordion-two"
+                                    data-bs-parent="#accordion"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordion"
+                                >
+                                    <li class="py-3">
+                                        <a href="../form-editors/form-editors.html" class="nav-link color">Form Editors</a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="../form-layout/form-layout.html" class="nav-link color">Form Layouts</a>
+                                    </li>                                        
+                                    <li class="py-3">
+                                        <a href="../form-elements/form-elements.html" class="nav-link color">Form Elements</a>   
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="../form-validate/form-validate.html" class="nav-link color">Form validation</a>   
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#accordion-three"
+                                    >
+                                        <h5><i class="fa-solid fa-table-list"></i></h5>
+                                        <h5>Tables</h5>
+                                    </button>
+                                </h2>
+                                <ul
+                                    id="accordion-three"
+                                    data-bs-parent="#accordion"
+                                    class="accordion-collapse collapse"
+                                >
+                                    <li class="py-3">
+                                        <a href="../general-table/general-table.html" class="nav-link color">General Tables</a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="../data-table/data-table.html" class="nav-link color">Data Tables</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#accordion-four"
+                                    >
+                                        
+                                        <h5><i class="fa-solid fa-chart-pie"></i></h5>
+                                        <h5>Charts</h5>
+                                    </button>
+                                </h2>
+                                <ul
+                                    id="accordion-four"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordion"
+                                >
+                                    <li class="py-3"><a href="../charts/chart-js.html" class="nav-link color">Chart.js</a></li>
+                                    <li class="py-3"><a href="../apex-charts/apex-charts.html" class="nav-link color">Apex Charts</a></li>
+                                    <li class="py-3"><a href="../echart/echart.html" class="nav-link color">EChart</a></li>
+                                </ul>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed d-flex justify-content-start align-items-start gap-3"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#accordion-five"
+                                    >
+                                        
+                                        <h5><i class="fa-solid fa-icons"></i></h5>
+                                        <h5>Icons</h5>
+                                    </button>
+                                </h2>
+                                <ul
+                                    class="collapse accordion-collapse"
+                                    data-bs-parent="accordion"
+                                    id="accordion-five"
+                                >
+                                        <li class="py-3">
+                                            <a href="../bootstrabicons/bootstrabicons.html" class="nav-link color">Bootstrab Icons</a>
+                                        </li>
+                                        <li class="py-3">
+                                            <a href="../remix-icons/remix-icons.html" class="nav-link color">Remix Icons</a>
+                                        </li>
+                                        <li class="py-3">
+                                            <a href="../box-icons/box-icons.html" class="nav-link color">Box Icons</a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p>pages</p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button not-accordion">
+                                        <a
+                                                href="../profile/profile.html"
+                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                                ><h5><i class="fa-regular fa-user"></i></h5><h5>profile</h5></a
+                                            >
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button not-accordion">
+                                        <a
+                                                href="../faq/faq.html"
+                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                                ><h5><i class="fa-regular fa-circle-question"></i></h5><h5>F . A . Q</h5></a
+                                            >
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button not-accordion">
+                                        <a
+                                                href="../contact/contact.html"
+                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                                ><h5><i class="fa-regular fa-envelope"></i></h5><h5>Contact</h5></a
+                                            >
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button not-accordion">
+                                        <a
+                                                href="../register/register.html"
+                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                                ><h5><i class="fa-regular fa-rectangle-list"></i></h5><h5>Register</h5></a
+                                            >
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button not-accordion">
+                                        <a
+                                                href="../log-in/log-in.html"
+                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                                ><h5><i class="fa-solid fa-right-to-bracket"></i><h5>Log In</h5></a
+                                            >
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button not-accordion">
+                                        <a
+                                                href="../error 404/error404.html"
+                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                                ><h5><i class="fa-solid fa-triangle-exclamation"></i><h5>Error 404</h5></a
+                                            >
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button not-accordion">
+                                        <a
+                                                href="blank/blank.html"
+                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                                ><h5><i class="fa-regular fa-file"></i><h5>Blank</h5></a
+                                            >
+                                    </button>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="fixing-nav"></div>
+        <h1>Modal</h1>
+        <nav style="--bs-breadcrumb-divider: '/'" aria-label="breadcrumb">
+            <ol class="breadcrumb bg-light">
+                <li class="breadcrumb-item">
+                    <a class="bread-crumb-not-active" href="../index.html"
+                        >Home</a
+                    >
+                </li>
+                <li class="breadcrumb-item">
+                    <a class="bread-crumb-not-active">Components</a>
+                </li>
+                <li class="breadcrumb-item active">Modal</li>
+            </ol>
+        </nav>
+        <main class="d-flex justify-content-between">
+            <div id="offcanvas-space"></div>
+            <section id="first-column" class="row gap-4">
+                <div class="col-lg-5">
+                    <div class="card shadow">
+                        <div class="card-header w-100">
+                            <h5 class="card-title">Basic Modal</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Toggle a working modal demo by clicking the
+                                button below. It will slide down and fade in
+                                from the top of the page
+                            </p>
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#Modal1"
+                            >
+                                Basic Modal
+                            </button>
+
+                            <div
+                                class="modal fade"
+                                id="Modal1"
+                                tabindex="-1"
+                                aria-labelledby="exampleModalLabel"
+                                aria-hidden="true"
+                            >
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1
+                                                class="modal-title fs-5"
+                                                id="Modal2"
+                                            >
+                                                Basic Modal
+                                            </h1>
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Non omnis incidunt qui sed occaecati
+                                            magni asperiores est mollitia.
+                                            Soluta at et reprehenderit. Placeat
+                                            autem numquam et fuga numquam.
+                                            Tempora in facere consequatur sit
+                                            dolor ipsum. Consequatur nemo amet
+                                            incidunt est facilis. Dolorem neque
+                                            recusandae quo sit molestias sint
+                                            dignissimos.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button
+                                                type="button"
+                                                class="btn btn-secondary"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                Close
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btn btn-primary"
+                                            >
+                                                Save changes
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card shadow">
+                        <div class="card-header w-100">
+                            <h5 class="card-title">Disabled Backdrop</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                You can disable the backdrop by adding
+                                data-bs-backdrop="false" to .modal-dialog
+                            </p>
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop"
+                            >
+                                Launch modal
+                            </button>
+
+                            <div
+                                class="modal fade"
+                                id="staticBackdrop"
+                                data-bs-backdrop="static"
+                                data-bs-keyboard="false"
+                                tabindex="-1"
+                                aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true"
+                            >
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1
+                                                class="modal-title fs-5"
+                                                id="staticBackdropLabel"
+                                            >
+                                                Disabled Backdrop
+                                            </h1>
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Non omnis incidunt qui sed occaecati
+                                            magni asperiores est mollitia.
+                                            Soluta at et reprehenderit. Placeat
+                                            autem numquam et fuga numquam.
+                                            Tempora in facere consequatur sit
+                                            dolor ipsum. Consequatur nemo amet
+                                            incidunt est facilis. Dolorem neque
+                                            recusandae quo sit molestias sint
+                                            dignissimos.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button
+                                                type="button"
+                                                class="btn btn-secondary"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                Close
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btn btn-primary"
+                                            >
+                                                Save Changes
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card shadow">
+                        <div class="card-header w-100">
+                            <h5 class="card-title">Modal Sizes</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Modals have three optional sizes, available via
+                                modifier classes to be placed on a
+                                .modal-dialog. These sizes kick in at certain
+                                breakpoints to avoid horizontal scrollbars on
+                                narrower viewports..
+                            </p>
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#Modal3"
+                            >
+                                modal xl
+                            </button>
+
+                            <div
+                                class="modal fade"
+                                id="Modal3"
+                                tabindex="-1"
+                                aria-labelledby="exampleModalLabel"
+                                aria-hidden="true"
+                            >
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1
+                                                class="modal-title fs-5"
+                                                id="exampleModalLabel"
+                                            >
+                                                Basic Modal
+                                            </h1>
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Non omnis incidunt qui sed occaecati
+                                            magni asperiores est mollitia.
+                                            Soluta at et reprehenderit. Placeat
+                                            autem numquam et fuga numquam.
+                                            Tempora in facere consequatur sit
+                                            dolor ipsum. Consequatur nemo amet
+                                            incidunt est facilis. Dolorem neque
+                                            recusandae quo sit molestias sint
+                                            dignissimos.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button
+                                                type="button"
+                                                class="btn btn-secondary"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                Close
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btn btn-primary"
+                                            >
+                                                Save changes
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#Modal4"
+                            >
+                                Modal lg
+                            </button>
+
+                            <div
+                                class="modal fade"
+                                id="Modal4"
+                                tabindex="-1"
+                                aria-labelledby="exampleModalLabel"
+                                aria-hidden="true"
+                            >
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1
+                                                class="modal-title fs-5"
+                                                id="exampleModalLabel"
+                                            >
+                                                Basic Modal
+                                            </h1>
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Non omnis incidunt qui sed occaecati
+                                            magni asperiores est mollitia.
+                                            Soluta at et reprehenderit. Placeat
+                                            autem numquam et fuga numquam.
+                                            Tempora in facere consequatur sit
+                                            dolor ipsum. Consequatur nemo amet
+                                            incidunt est facilis. Dolorem neque
+                                            recusandae quo sit molestias sint
+                                            dignissimos.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button
+                                                type="button"
+                                                class="btn btn-secondary"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                Close
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btn btn-primary"
+                                            >
+                                                Save changes
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modal5"
+                            >
+                                Modal sm
+                            </button>
+
+                            <div
+                                class="modal fade"
+                                id="modal5"
+                                tabindex="-1"
+                                aria-labelledby="exampleModalLabel"
+                                aria-hidden="true"
+                            >
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1
+                                                class="modal-title fs-5"
+                                                id="exampleModalLabel"
+                                            >
+                                                Basic Modal
+                                            </h1>
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Non omnis incidunt qui sed occaecati
+                                            magni asperiores est mollitia.
+                                            Soluta at et reprehenderit. Placeat
+                                            autem numquam et fuga numquam.
+                                            Tempora in facere consequatur sit
+                                            dolor ipsum. Consequatur nemo amet
+                                            incidunt est facilis. Dolorem neque
+                                            recusandae quo sit molestias sint
+                                            dignissimos.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button
+                                                type="button"
+                                                class="btn btn-secondary"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                Close
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btn btn-primary"
+                                            >
+                                                Save changes
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modal6"
+                            >
+                                Modal full screen
+                            </button>
+
+                            <div
+                                class="modal fade"
+                                id="modal6"
+                                tabindex="-1"
+                                aria-labelledby="exampleModalLabel"
+                                aria-hidden="true"
+                            >
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1
+                                                class="modal-title fs-5"
+                                                id="exampleModalLabel"
+                                            >
+                                                Basic Modal
+                                            </h1>
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Non omnis incidunt qui sed occaecati
+                                            magni asperiores est mollitia.
+                                            Soluta at et reprehenderit. Placeat
+                                            autem numquam et fuga numquam.
+                                            Tempora in facere consequatur sit
+                                            dolor ipsum. Consequatur nemo amet
+                                            incidunt est facilis. Dolorem neque
+                                            recusandae quo sit molestias sint
+                                            dignissimos.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button
+                                                type="button"
+                                                class="btn btn-secondary"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                Close
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btn btn-primary"
+                                            >
+                                                Save changes
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card shadow">
+                        <div class="card-header w-100">
+                            <h5 class="card-title">Scrolling long content</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                When modals become too long for the user’s
+                                viewport or device, they scroll independent of
+                                the page itself. You can also create a
+                                scrollable modal that allows scroll the modal
+                                body by adding .modal-dialog-scrollable to
+                                .modal-dialog
+                            </p>
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modal7"
+                            >
+                                Modal Dialoge Scrollable
+                            </button>
+
+                            <div
+                                class="modal fade"
+                                id="modal7"
+                                tabindex="-1"
+                                aria-labelledby="exampleModalLabel"
+                                aria-hidden="true"
+                            >
+                                <div
+                                    class="modal-dialog modal-dialog-scrollable"
+                                >
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1
+                                                class="modal-title fs-5"
+                                                id="exampleModalLabel"
+                                            >
+                                                Basic Modal
+                                            </h1>
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>
+                                                Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit.
+                                                Porro aspernatur ad alias
+                                                cupiditate tempora sed atque
+                                                harum accusantium commodi
+                                                aperiam sunt perspiciatis esse
+                                                laboriosam voluptas
+                                                necessitatibus, molestias
+                                                molestiae, voluptatum quasi?
+                                            </p>
+                                            <p>
+                                                Tempore harum neque, numquam
+                                                quia, iure officia similique
+                                                voluptatem repudiandae
+                                                consequuntur fugit obcaecati
+                                                architecto possimus esse, quo
+                                                sint modi id ducimus nihil
+                                                quaerat dolorum cum! Sit
+                                                sapiente nihil blanditiis
+                                                repellendus.
+                                            </p>
+                                            <p>
+                                                Amet quia illum corporis rerum
+                                                recusandae odio architecto
+                                                ipsam, pariatur veniam nemo
+                                                consequatur quos nihil
+                                                voluptatem vero, voluptate at
+                                                accusantium perspiciatis vel eum
+                                                ipsa asperiores. Et doloremque
+                                                fugit voluptatem voluptatum!
+                                            </p>
+                                            <p>
+                                                Quas sapiente voluptatum
+                                                architecto amet? Voluptate
+                                                cupiditate culpa dicta
+                                                necessitatibus praesentium eius
+                                                unde, reprehenderit tempora!
+                                                Asperiores possimus vero,
+                                                voluptatibus animi ipsam modi
+                                                odio, aliquam adipisci odit
+                                                consectetur minima numquam id.
+                                            </p>
+                                            <p>
+                                                Quisquam consectetur, laborum,
+                                                dolor architecto facere, iusto
+                                                assumenda sunt saepe quasi
+                                                adipisci aperiam. Tempora unde
+                                                et veritatis non cupiditate
+                                                corrupti aliquid architecto
+                                                dolore. Est placeat praesentium
+                                                dolorum magni. Reprehenderit,
+                                                delectus!
+                                            </p>
+                                            <p>
+                                                Minus voluptatibus reiciendis
+                                                voluptates quibusdam voluptatem
+                                                odit magni, labore, error
+                                                officia eos pariatur laboriosam
+                                                ducimus sapiente quas, odio
+                                                aperiam quasi iure repudiandae.
+                                                Eaque natus quasi a optio libero
+                                                maiores placeat?
+                                            </p>
+                                            <p>
+                                                Id animi ducimus veritatis
+                                                aspernatur assumenda harum non
+                                                voluptatibus. Nostrum sed animi
+                                                officiis cupiditate
+                                                exercitationem, veritatis
+                                                quisquam consequuntur libero
+                                                itaque porro, eaque laudantium,
+                                                ullam incidunt! Est obcaecati
+                                                architecto quia assumenda?
+                                            </p>
+                                            <p>
+                                                Assumenda molestias, in velit
+                                                minima totam temporibus
+                                                provident eligendi. Voluptatem
+                                                sit suscipit fugit, vero
+                                                cupiditate mollitia omnis ipsam,
+                                                delectus voluptates sed ut vel,
+                                                nam pariatur ipsum iste saepe
+                                                error repellendus?
+                                            </p>
+                                            <p>
+                                                Porro error consequatur delectus
+                                                ratione cum, molestias iusto.
+                                                Placeat voluptate reprehenderit
+                                                minima molestiae itaque ipsum
+                                                exercitationem rerum inventore
+                                                earum quasi. Recusandae labore
+                                                repudiandae quae eligendi
+                                                pariatur ad quaerat delectus
+                                                consequuntur.
+                                            </p>
+                                            <p>
+                                                Amet repudiandae ducimus at
+                                                dignissimos delectus sapiente
+                                                autem, obcaecati quos ullam,
+                                                unde, laudantium sunt veritatis
+                                                ex quisquam harum minima?
+                                                Blanditiis voluptatum numquam,
+                                                in repudiandae at accusantium
+                                                ipsam asperiores! Neque, non?
+                                            </p>
+                                            <p>
+                                                Expedita dicta molestiae eveniet
+                                                dolorum obcaecati. Et, excepturi
+                                                fuga. Dolores illum nulla, quam
+                                                nam cupiditate quo officia quod,
+                                                voluptate dolor fuga perferendis
+                                                impedit aperiam, doloremque illo
+                                                possimus obcaecati dignissimos
+                                                nihil.
+                                            </p>
+                                            <p>
+                                                Voluptatibus ea aperiam dolorem
+                                                repellat et expedita minus
+                                                minima molestiae tempora. In
+                                                fuga voluptate id ullam quod
+                                                dicta sapiente, ut enim sit
+                                                recusandae consectetur
+                                                aspernatur et repellendus,
+                                                eligendi veritatis nostrum!
+                                            </p>
+                                            <p>
+                                                Quia est possimus temporibus
+                                                earum voluptatem harum dolorem
+                                                assumenda id repellat aliquam
+                                                nisi, aperiam totam soluta
+                                                corrupti enim necessitatibus
+                                                consectetur. Sunt eum at debitis
+                                                doloremque possimus nisi iure
+                                                voluptatibus cupiditate.
+                                            </p>
+                                            <p>
+                                                Quo deserunt quae a corporis
+                                                suscipit non deleniti explicabo
+                                                veritatis aspernatur, distinctio
+                                                repellat natus nesciunt expedita
+                                                inventore, vel reprehenderit
+                                                aperiam perferendis temporibus
+                                                consequatur culpa placeat fuga
+                                                repellendus blanditiis. Nam,
+                                                maxime!
+                                            </p>
+                                            <p>
+                                                Deserunt quaerat facilis
+                                                expedita consectetur nisi a cum
+                                                ipsum dolorum similique maxime,
+                                                voluptatem modi voluptatum
+                                                minima quas quae provident ipsa
+                                                adipisci molestias est, ut
+                                                corrupti. Deserunt quibusdam at
+                                                totam earum!
+                                            </p>
+                                            <p>
+                                                Iusto tempore quaerat nemo
+                                                repudiandae placeat, velit
+                                                deserunt eos reprehenderit
+                                                ducimus, commodi quas ut
+                                                temporibus explicabo ea aperiam
+                                                architecto? Quas alias ipsum
+                                                consectetur pariatur inventore
+                                                ratione neque fuga, harum
+                                                dolorum!
+                                            </p>
+                                            <p>
+                                                Enim minima necessitatibus
+                                                beatae? Cupiditate accusantium
+                                                placeat assumenda dicta, aut ad
+                                                dolore numquam excepturi odio
+                                                sint ipsa quos vitae, deserunt
+                                                eius error at provident. Iure
+                                                consectetur enim porro optio
+                                                expedita.
+                                            </p>
+                                            <p>
+                                                Odio quam ad, enim veritatis
+                                                odit explicabo tempora sint
+                                                incidunt iusto asperiores
+                                                impedit id temporibus animi,
+                                                neque cum expedita sequi minima.
+                                                Minus natus expedita itaque
+                                                consequuntur nemo? Velit, qui
+                                                eligendi!
+                                            </p>
+                                            <p>
+                                                Consequatur, voluptates.
+                                                Suscipit molestias ipsam quam
+                                                quasi officiis explicabo,
+                                                incidunt quae aut doloremque,
+                                                sequi, reprehenderit optio
+                                                obcaecati laborum at. Nesciunt
+                                                tempora labore cumque aut quos
+                                                ex alias nemo exercitationem
+                                                repellat.
+                                            </p>
+                                            <p>
+                                                Inventore aut, adipisci libero
+                                                atque laborum natus expedita
+                                                delectus facilis modi iusto
+                                                suscipit perspiciatis laboriosam
+                                                molestiae nemo autem porro
+                                                ratione quis fuga pariatur
+                                                praesentium dolorem soluta
+                                                placeat odio? Dolor,
+                                                repudiandae!
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button
+                                                type="button"
+                                                class="btn btn-secondary"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                Close
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btn btn-primary"
+                                            >
+                                                Save changes
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card shadow">
+                        <div class="card-header w-100">
+                            <h5 class="card-title">Disabled Animation</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                For modals that simply appear rather than fade
+                                in to view, remove the .fade class from your
+                                .modal element
+                            </p>
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#Modal8"
+                            >
+                                Modal Without Animation
+                            </button>
+
+                            <div
+                                class="modal"
+                                id="Modal8"
+                                tabindex="-1"
+                                aria-labelledby="exampleModalLabel"
+                                aria-hidden="true"
+                            >
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1
+                                                class="modal-title fs-5"
+                                                id="Modal8"
+                                            >
+                                                Basic Modal
+                                            </h1>
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Non omnis incidunt qui sed occaecati
+                                            magni asperiores est mollitia.
+                                            Soluta at et reprehenderit. Placeat
+                                            autem numquam et fuga numquam.
+                                            Tempora in facere consequatur sit
+                                            dolor ipsum. Consequatur nemo amet
+                                            incidunt est facilis. Dolorem neque
+                                            recusandae quo sit molestias sint
+                                            dignissimos.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button
+                                                type="button"
+                                                class="btn btn-secondary"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                Close
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btn btn-primary"
+                                            >
+                                                Save changes
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card shadow">
+                        <div class="card-header w-100">
+                            <h5 class="card-title">Vertically Centered</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Add .modal-dialog-centered to .modal-dialog to
+                                vertically center the modal.
+                            </p>
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#Modal8"
+                            >
+                                vertically Modal
+                            </button>
+
+                            <div
+                                class="modal fade"
+                                id="Modal8"
+                                tabindex="-1"
+                                aria-labelledby="exampleModalLabel"
+                                aria-hidden="true"
+                            >
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1
+                                                class="modal-title fs-5"
+                                                id="Modal8"
+                                            >
+                                                Basic Modal
+                                            </h1>
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Non omnis incidunt qui sed occaecati
+                                            magni asperiores est mollitia.
+                                            Soluta at et reprehenderit. Placeat
+                                            autem numquam et fuga numquam.
+                                            Tempora in facere consequatur sit
+                                            dolor ipsum. Consequatur nemo amet
+                                            incidunt est facilis. Dolorem neque
+                                            recusandae quo sit molestias sint
+                                            dignissimos.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button
+                                                type="button"
+                                                class="btn btn-secondary"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                Close
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btn btn-primary"
+                                            >
+                                                Save changes
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer
+            class="d-flex flex-column justify-content-center align-items-center mt-5"
+        >
+            <p>© Copyright NiceAdmin. All Rights Reserved</p>
+            <p>
+                Designed by
+                <a
+                    class="text-decoration-none"
+                    href="https://bootstrapmade.com/"
+                    >BootstrapMade</a
+                >
+            </p>
+        </footer>
+        <script>
+            const offcanvas = document.querySelector("#offcanvasNavbar");
+            const body = document.body;
+
+            offcanvas.addEventListener("show.bs.offcanvas", function () {
+                body.classList.add("offcanvas-open");
+            });
+
+            offcanvas.addEventListener("hide.bs.offcanvas", function () {
+                body.classList.remove("offcanvas-open");
+            });
+        </script>
+    </body>
+</html>

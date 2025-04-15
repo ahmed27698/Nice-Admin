@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tabs</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://kit.fontawesome.com/66944bb815.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="Taps.css" />
+    </head>
+    <body class="bg-light">
+        <nav class="navbar fixed-top shadow">
+            <div class="container-fluid">
+                <div>
+                    <a href="../index.html"><img src="../imgs/logo.png" alt="logo" /></a>
+                    <a class="navbar-brand" href="../index.html">Nice Admin</a>
+                </div>
+
+                <div id="center-nav" class="d-flex">
+                    <button
+                        class="navbar-toggler"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar"
+                        id="hamburger-icon"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <form class="d-flex">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            id="input-center-nav"
+                        />
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </form>
+                </div>
+                <div
+                    id="right-nav"
+                    class="d-flex align-items-center gap-4"
+                >
+                    <i class="fa-solid fa-bell text-primary fs-4"></i>
+                    <i class="fa-solid fa-message text-success fs-4"></i>
+                    <div>
+                        <span
+                            class="dropdown-toggle d-flex align-items-center me-3 gap-3"
+                            data-bs-toggle="dropdown"
+                        >
+                            <img
+                                id="profile-img"
+                                src="../imgs/profile-img.jpg"
+                                alt="profile"
+                                class="rounded-circle"
+                            />
+                            <p id="profile-name">k.Anderson</p>
+                        </span>
+                        <ul
+                            class="dropdown-menu dropdown-menu-end dropdown-menu-light me-3"
+                        >
+                            <li class="text-center">
+                                <h5 id="profile-name">Kevin Anderson</h5>
+                                <p>Web Designer</p>
+                            </li>
+                            <li>
+                                <a class="dropdown-item fs-5" href="../profile/profile.html"
+                                    >My Profile</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item fs-5" href="../profile/profile.html"
+                                    >Account Settings</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item fs-5" href="../faq/faq.html"
+                                    >Need Help?</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item fs-5" href="#"
+                                    >Sign Out</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="offcanvas offcanvas-start shadow show"
+                    id="offcanvasNavbar"
+                >
+                    <div class="offcanvas-body">
+                        <div class="accordion" id="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button not-accordion"
+                                    >
+                                        <a
+                                            href="../index.html"
+                                            class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3 color"
+                                            ><h5><i class="fa-solid fa-table-cells-large"></i></h5><h5>Dashboard</h5></a
+                                        >
+                                    </button>
+                                </h2>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed d-flex align-items-center justify-content-start gap-3 color"
+                                        data-bs-target="#accordion-one"
+                                        data-bs-toggle="collapse"
+                                    >
+                                    <h5><i class="fa-regular fa-chart-bar"></i></h5>
+                                    <h5>components</h5>    
+                                    </button>
+                                </h2>
+                                <ul
+                                    class="accordion-collapse collapse"
+                                    id="accordion-one"
+                                    data-bs-parent="#accordion"
+                                >
+                                    <li class="py-3"><a href="../alert/alert.html" class="nav-link color">Alerts</a></li>
+                                    <li class="py-3"><a href="../accordions/accordion.html" class="nav-link color">Accordion</a></li>
+                                    <li class="py-3"><a href="../badges/badges.html" class="nav-link color ">Badges</a></li>
+                                    <li class="py-3"><a href="../bread-crumb/bread-crumb.html" class="nav-link color">Breadcrumbs</a></li>
+                                    <li class="py-3"><a href="../buttons/buttons.html" class="nav-link color">buttons</a></li>
+                                    <li class="py-3"><a href="../cards/cards.html" class="nav-link color">Cards</a></li>
+                                    <li class="py-3"><a href="../carousel/carousel.html" class="nav-link color">Carousel</a></li>
+                                    <li class="py-3"><a href="../List-group/List-group.html" class="nav-link color">List group</a></li>
+                                    <li class="py-3"><a href="../modal/modal.html" class="nav-link color">Modal</a></li>
+                                    <li class="py-3"><a href="../Taps/Taps.html" class="nav-link color">Taps</a></li>
+                                    <li class="py-3"><a href="../pagination/pagination.html" class="nav-link color">Pagination</a></li>
+                                    <li class="py-3"><a href="../progress/progress.html" class="nav-link color">Progress</a></li>
+                                    <li class="py-3"><a href="../spinners/spinners.html" class="nav-link color">Spinners</a></li>
+                                    <li class="py-3"><a href="../tooltips/tooltips.html" class="nav-link color">Tooltips</a></li>
+                                </ul>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#accordion-two"
+                                    >
+                                        <h5><i class="fa-regular fa-address-card"></i></h5>
+                                        <h5>Forms</h5>
+                                    </button>
+                                </h2>
+
+                                <ul
+                                    id="accordion-two"
+                                    data-bs-parent="#accordion"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordion"
+                                >
+                                    <li class="py-3">
+                                        <a href="../form-editors/form-editors.html" class="nav-link color">Form Editors</a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="../form-layout/form-layout.html" class="nav-link color">Form Layouts</a>
+                                    </li>                                        
+                                    <li class="py-3">
+                                        <a href="../form-elements/form-elements.html" class="nav-link color">Form Elements</a>   
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="../form-validate/form-validate.html" class="nav-link color">Form validation</a>   
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#accordion-three"
+                                    >
+                                        <h5><i class="fa-solid fa-table-list"></i></h5>
+                                        <h5>Tables</h5>
+                                    </button>
+                                </h2>
+                                <ul
+                                    id="accordion-three"
+                                    data-bs-parent="#accordion"
+                                    class="accordion-collapse collapse"
+                                >
+                                    <li class="py-3">
+                                        <a href="../general-table/general-table.html" class="nav-link color">General Tables</a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="../data-table/data-table.html" class="nav-link color">Data Tables</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#accordion-four"
+                                    >
+                                        
+                                        <h5><i class="fa-solid fa-chart-pie"></i></h5>
+                                        <h5>Charts</h5>
+                                    </button>
+                                </h2>
+                                <ul
+                                    id="accordion-four"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordion"
+                                >
+                                    <li class="py-3"><a href="../charts/chart-js.html" class="nav-link color">Chart.js</a></li>
+                                    <li class="py-3"><a href="../apex-charts/apex-charts.html" class="nav-link color">Apex Charts</a></li>
+                                    <li class="py-3"><a href="../echart/echart.html" class="nav-link color">EChart</a></li>
+                                </ul>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed d-flex justify-content-start align-items-start gap-3"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#accordion-five"
+                                    >
+                                        
+                                        <h5><i class="fa-solid fa-icons"></i></h5>
+                                        <h5>Icons</h5>
+                                    </button>
+                                </h2>
+                                <ul
+                                    class="collapse accordion-collapse"
+                                    data-bs-parent="accordion"
+                                    id="accordion-five"
+                                >
+                                        <li class="py-3">
+                                            <a href="../bootstrabicons/bootstrabicons.html" class="nav-link color">Bootstrab Icons</a>
+                                        </li>
+                                        <li class="py-3">
+                                            <a href="../remix-icons/remix-icons.html" class="nav-link color">Remix Icons</a>
+                                        </li>
+                                        <li class="py-3">
+                                            <a href="../box-icons/box-icons.html" class="nav-link color">Box Icons</a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p>pages</p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button not-accordion">
+                                        <a
+                                                href="../profile/profile.html"
+                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                                ><h5><i class="fa-regular fa-user"></i></h5><h5>profile</h5></a
+                                            >
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button not-accordion">
+                                        <a
+                                                href="../faq/faq.html"
+                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                                ><h5><i class="fa-regular fa-circle-question"></i></h5><h5>F . A . Q</h5></a
+                                            >
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button not-accordion">
+                                        <a
+                                                href="../contact/contact.html"
+                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                                ><h5><i class="fa-regular fa-envelope"></i></h5><h5>Contact</h5></a
+                                            >
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button not-accordion">
+                                        <a
+                                                href="../register/register.html"
+                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                                ><h5><i class="fa-regular fa-rectangle-list"></i></h5><h5>Register</h5></a
+                                            >
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button not-accordion">
+                                        <a
+                                                href="../log-in/log-in.html"
+                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                                ><h5><i class="fa-solid fa-right-to-bracket"></i><h5>Log In</h5></a
+                                            >
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button not-accordion">
+                                        <a
+                                                href="../error 404/error404.html"
+                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                                ><h5><i class="fa-solid fa-triangle-exclamation"></i><h5>Error 404</h5></a
+                                            >
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button not-accordion">
+                                        <a
+                                                href="blank/blank.html"
+                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
+                                                ><h5><i class="fa-regular fa-file"></i><h5>Blank</h5></a
+                                            >
+                                    </button>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="fixing-nav"></div>
+        <h1>Taps</h1>
+        <nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
+            <ol class="breadcrumb bg-light">
+                <li class="breadcrumb-item"><a class="bread-crumb-not-active" href="../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a class="bread-crumb-not-active">Components</a></li>
+                <li class="breadcrumb-item active">Taps</li>
+            </ol>
+        </nav>
+        <main class="d-flex justify-content-between">
+            <div id="offcanvas-space"></div>
+            <section id="first-column" class="row gap-4">
+                <div class="col-lg-5">
+                    <div class="card shadow">
+                        <div class="card-header w-100">
+                            <h5 class="card-title">
+                                Default Taps
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item"><button data-bs-target="#home" data-bs-toggle="tab" class="nav-link active">Home</button></li>
+                                <li class="nav-item"><button data-bs-target="#profile" data-bs-toggle="tab" class="nav-link">Profile</button></li>
+                                <li class="nav-item"><button data-bs-target="#contact" data-bs-toggle="tab" class="nav-link">Contact</button></li>
+                            </ul>
+                            <div class="tab-content mt-3">
+                                <div class="tab-pane show fade active" id="home">
+                                    <p><strong class="text-info">Home</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, odit. Illum nemo consequuntur culpa neque eveniet cupiditate fuga alias maiores.</p>
+                                </div>
+                                <div class="tab-pane fade" id="profile">
+                                    <p><strong class="text-info">Profile</strong> ipsum dolor sit amet, consectetur adipisicing elit. Esse, odit. Illum nemo consequuntur culpa neque eveniet cupiditate fuga alias maiores.</p>
+                                </div>
+                                <div class="tab-pane fade" id="contact">
+                                    <p><strong class="text-info">Contact</strong> ipsum dolor sit amet, consectetur adipisicing elit. Esse, odit. Illum nemo consequuntur culpa neque eveniet cupiditate fuga alias maiores.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+                <div class="col-lg-5">
+                    <div class="card shadow">
+                        <div class="card-header w-100">
+                            <h5 class="card-title">
+                                Default Tabs Justified
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="nav nav-tabs nav-fill d-flex justify-content-between">
+                                <li class="nav-item"><button data-bs-toggle="tab" class="nav-link" data-bs-target="#home_justified">Home</button></li>
+                                <li class="nav-item"><button data-bs-toggle="tab" class="nav-link" data-bs-target="#profile_justified">Profile</button></li>
+                                <li class="nav-item"><button data-bs-toggle="tab" class="nav-link" data-bs-target="#contact_justified">Contact</button></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade active show" id="home_justified"><p><strong class="text-primary">Home</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita in veritatis aliquam. Quaerat corrupti quisquam officia minus repellat optio sequi!</p></div>
+                                <div class="tab-pane fade" id="profile_justified"><p><strong class="text-primary">Profile</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita in veritatis aliquam. Quaerat corrupti quisquam officia minus repellat optio sequi!</p></div>
+                                <div class="tab-pane fade" id="contact_justified"><p><strong class="text-primary">Contact</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita in veritatis aliquam. Quaerat corrupti quisquam officia minus repellat optio sequi!</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card shadow">
+                        <div class="card-header w-100">
+                            <h5 class="card-title">
+                                Bordered Tabs
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="nav nav-tabs custom-tabs">
+                                <li class="nav-item">
+                                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#home-border">Home</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-border">Profile</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#contact-border">Contact</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content p-3">
+                                <div class="tab-pane fade show active" id="home-border">
+                                    <p><strong class="text-success">Home </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. A deleniti accusamus culpa repellendus ratione excepturi nostrum eaque nesciunt provident voluptatibus.</p>
+                                </div>
+                                <div class="tab-pane fade" id="profile-border">
+                                    <p><strong class="text-success">Profile </strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure aspernatur perspiciatis at molestiae maxime voluptatem quod ab adipisci? Sapiente, modi?</p>
+                                </div>
+                                <div class="tab-pane fade" id="contact-border">
+                                    <p><strong class="text-success">Contact </strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure aspernatur perspiciatis at molestiae maxime voluptatem quod ab adipisci? Sapiente, modi?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card shadow">
+                        <div class="card-header w-100">
+                            <h5 class="card-title">
+                                Bordered Tabs Justified
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="nav nav-tabs nav-fill custom-tabs">
+                                <li class="nav-item">
+                                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#home-border-justify">Home</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-border-justify">Profile</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#contact-border-justify">Contact</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content p-3">
+                                <div class="tab-pane fade show active" id="home-border-justify">
+                                    <p><strong class="text-danger">Home </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. A deleniti accusamus culpa repellendus ratione excepturi nostrum eaque nesciunt provident voluptatibus.</p>
+                                </div>
+                                <div class="tab-pane fade" id="profile-border-justify">
+                                    <p><strong class="text-danger">Profile</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure aspernatur perspiciatis at molestiae maxime voluptatem quod ab adipisci? Sapiente, modi?</p>
+                                </div>
+                                <div class="tab-pane fade" id="contact-border-justify">
+                                    <p><strong class="text-danger">Contact</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure aspernatur perspiciatis at molestiae maxime voluptatem quod ab adipisci? Sapiente, modi?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card shadow">
+                        <div class="card-header w-100">
+                            <h5 class="card-title">
+                                Pills Tabs
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="nav nav-pills nav-fill custom-tabs">
+                                <li class="nav-item">
+                                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#home-pill">Home</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-pill">Profile</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#contact-pill">Contact</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content p-3">
+                                <div class="tab-pane fade show active" id="home-pill">
+                                    <p><strong class="text-dark">Home</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. A deleniti accusamus culpa repellendus ratione excepturi nostrum eaque nesciunt provident voluptatibus.</p>
+                                </div>
+                                <div class="tab-pane fade" id="profile-pill">
+                                    <p><strong class="text-dark">Profile</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure aspernatur perspiciatis at molestiae maxime voluptatem quod ab adipisci? Sapiente, modi?</p>
+                                </div>
+                                <div class="tab-pane fade" id="contact-pill">
+                                    <p><strong class="text-dark">Contact</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure aspernatur perspiciatis at molestiae maxime voluptatem quod ab adipisci? Sapiente, modi?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card shadow">
+                        <div class="card-header w-100">
+                            <h5 class="card-title">
+                                Vertical Pills Tabs
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-body d-flex justify-content-between">
+                                <ul class="nav nav-pills nav-fill custom-tabs">
+                                    <li class="nav-item">
+                                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#home-vertically">Home</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-vertically">Profile</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#contact-vertically">Contact</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content p-3">
+                                    <div class="tab-pane fade show active" id="home-vertically">
+                                        <p><strong class="text-warning">Home</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. A deleniti accusamus culpa repellendus ratione excepturi nostrum eaque nesciunt provident voluptatibus.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile-vertically">
+                                        <p><strong class="text-warning">Profile</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure aspernatur perspiciatis at molestiae maxime voluptatem quod ab adipisci? Sapiente, modi?</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="contact-vertically">
+                                        <p><strong class="text-warning">Contact</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure aspernatur perspiciatis at molestiae maxime voluptatem quod ab adipisci? Sapiente, modi?</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>                
+            </section>
+        </main>
+        <footer class="d-flex flex-column justify-content-center align-items-center mt-5">
+            <p>© Copyright NiceAdmin. All Rights Reserved</p>
+            <p>Designed by <a class="text-decoration-none" href="https://bootstrapmade.com/">BootstrapMade</a></p>
+        </footer>
+        <script>
+            const offcanvas = document.querySelector("#offcanvasNavbar");
+            const body = document.body;
+
+            offcanvas.addEventListener("show.bs.offcanvas", function () {
+                body.classList.add("offcanvas-open");
+            });
+
+            offcanvas.addEventListener("hide.bs.offcanvas", function () {
+                body.classList.remove("offcanvas-open");
+            });
+
+
+            
+        </script>
+    </body>
+</html>
