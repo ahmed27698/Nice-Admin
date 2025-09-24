@@ -6,7 +6,7 @@ body{
 
 }
 .offcanvas-open {
-    margin-left: 24%;
+    margin-left: 27%;
     transition: margin-left 0.3s ease;
 }
 .nav-link {

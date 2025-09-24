@@ -105,12 +105,12 @@ background-color: rgb(236, 240, 243);
     background-color: rgb(236, 240, 243);
 }
 .offcanvas-open {
-    margin-left: 23%;
+    margin-left: 27%;
     transition: margin-left 0.3s ease;
 }
 #editor_bubble {
     height: 200px;
-    border: 1px solid #ccc; /* لإبراز المحرر */
+    border: 1px solid #ccc; 
     padding: 10px;
 }
 #full-toolset {

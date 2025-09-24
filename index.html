@@ -661,7 +661,6 @@
                 offcanvas.addEventListener("hide.bs.offcanvas", function () {
                     body.classList.remove("offcanvas-open");
                     chartCard.classList.add('chart-height');
-
                 });
             </script>
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -746,7 +745,6 @@
             <script>
                 const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'];
 
-// تعريف البيانات
 const data2 = {
     labels: labels,
     datasets: [
@@ -777,14 +775,13 @@ const data2 = {
     ]
 };
 
-// تعريف الإعدادات
 const config2 = {
     type: 'line',
     data: data2,
     options: {
         responsive: true,
         interaction: {
-            mode: 'index', // يجعل كل النقاط تظهر عند نفس النقطة في X
+            mode: 'index',
             intersect: false
         },
         plugins: {
@@ -800,20 +797,19 @@ const config2 = {
             x: {
                 grid: {
                     drawBorder: false,
-                    drawOnChartArea: false, // منع الخطوط العادية
+                    drawOnChartArea: false, 
                     drawTicks: false
                 }
             },
             y: {
                 grid: {
-                    borderDash: [5, 5] // جعل خطوط Y متقطعة
+                    borderDash: [5, 5]
                 }
             }
         }
     }
 };
 
-// إنشاء المخطط
 const myChart = new Chart(
     document.getElementById('chart2'),
     config2
