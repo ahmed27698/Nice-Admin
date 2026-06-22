@@ -1,867 +1,588 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>nice admin</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous"
-        />
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://kit.fontawesome.com/66944bb815.js"
-            crossorigin="anonymous"
-        ></script>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css">
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"></script>
-        <style>
-            h1,.color{
-                color: rgb(1, 41, 112);
-            }
-        </style>
-    </head>
-    <body class="bg-light p-2">
-            <nav class="navbar fixed-top shadow">
-                <div class="container-fluid">
-                    <div>
-                        <a href="index.html"><img src="imgs/logo.png" alt="logo" /></a>
-                        <a class="navbar-brand" href="index.html">Nice Admin</a>
-                    </div>
-    
-                    <div id="center-nav" class="d-flex">
-                        <button
-                            class="navbar-toggler"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasNavbar"
-                            id="hamburger-icon"
-                        >
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <form class="d-flex">
-                            <input
-                                class="form-control me-2"
-                                type="search"
-                                placeholder="Search"
-                                id="input-center-nav"
-                            />
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </form>
-                    </div>
-                    <div
-                        id="right-nav"
-                        class="d-flex align-items-center gap-4"
-                    >
-                        <i class="fa-solid fa-bell text-primary fs-4"></i>
-                        <i class="fa-solid fa-message text-success fs-4"></i>
-                        <div>
-                            <span
-                                class="dropdown-toggle d-flex align-items-center me-3 gap-3"
-                                data-bs-toggle="dropdown"
-                            >
-                                <img
-                                    id="profile-img"
-                                    src="imgs/profile-img.jpg"
-                                    alt="profile"
-                                    class="rounded-circle"
-                                />
-                                <p id="profile-name">k.Anderson</p>
-                            </span>
-                            <ul
-                                class="dropdown-menu dropdown-menu-end dropdown-menu-light me-3"
-                            >
-                                <li class="text-center">
-                                    <h5 id="profile-name">Kevin Anderson</h5>
-                                    <p>Web Designer</p>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item fs-5" href="profile/profile.html"
-                                        >My Profile</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item fs-5" href="profile/profile.html"
-                                        >Account Settings</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item fs-5" href="faq/faq.html"
-                                        >Need Help?</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item fs-5" href="#"
-                                        >Sign Out</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div
-                        class="offcanvas offcanvas-start shadow show"
-                        id="offcanvasNavbar"
-                    >
-                        <div class="offcanvas-body">
-                            <div class="accordion" id="accordion">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button
-                                            class="accordion-button not-accordion"
-                                        >
-                                            <a
-                                                href="index.html"
-                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3 color"
-                                                ><h5><i class="fa-solid fa-table-cells-large"></i></h5><h5>Dashboard</h5></a
-                                            >
-                                        </button>
-                                    </h2>
-                                </div>
-                                
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button
-                                            class="accordion-button collapsed d-flex align-items-center justify-content-start gap-3 color"
-                                            data-bs-target="#accordion-one"
-                                            data-bs-toggle="collapse"
-                                        >
-                                        <h5><i class="fa-regular fa-chart-bar"></i></h5>
-                                        <h5>components</h5>    
-                                        </button>
-                                    </h2>
-                                    <ul
-                                        class="accordion-collapse collapse"
-                                        id="accordion-one"
-                                        data-bs-parent="#accordion"
-                                    >
-                                        <li class="py-3"><a href="alert/alert.html" class="nav-link color">Alerts</a></li>
-                                        <li class="py-3"><a class="nav-link color" href="accordions/accordion.html">Accordion</a></li>
-                                        <li class="py-3"><a href="badges/badges.html" class="nav-link color ">Badges</a></li>
-                                        <li class="py-3"><a href="bread-crumb/bread-crumb.html" class="nav-link color">Breadcrumbs</a></li>
-                                        <li class="py-3"><a href="buttons/buttons.html" class="nav-link color">buttons</a></li>
-                                        <li class="py-3"><a href="cards/cards.html" class="nav-link color">Cards</a></li>
-                                        <li class="py-3"><a href="carousel/carousel.html" class="nav-link color">Carousel</a></li>
-                                        <li class="py-3"><a href="List-group/List-group.html" class="nav-link color">List group</a></li>
-                                        <li class="py-3"><a href="modal/modal.html" class="nav-link color">Modal</a></li>
-                                        <li class="py-3"><a href="Taps/Taps.html" class="nav-link color">Taps</a></li>
-                                        <li class="py-3"><a href="pagination/pagination.html" class="nav-link color">Pagination</a></li>
-                                        <li class="py-3"><a href="progress/progress.html" class="nav-link color">Progress</a></li>
-                                        <li class="py-3"><a href="spinners/spinners.html" class="nav-link color">Spinners</a></li>
-                                        <li class="py-3"><a href="tooltips/tooltips.html" class="nav-link color">Tooltips</a></li>
-                                    </ul>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button
-                                            class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#accordion-two"
-                                        >
-                                            <h5><i class="fa-regular fa-address-card"></i></h5>
-                                            <h5>Forms</h5>
-                                        </button>
-                                    </h2>
-    
-                                    <ul
-                                        id="accordion-two"
-                                        data-bs-parent="#accordion"
-                                        class="accordion-collapse collapse"
-                                        data-bs-parent="#accordion"
-                                    >
-                                        <li class="py-3">
-                                            <a href="form-editors/form-editors.html" class="nav-link color">Form Editors</a>
-                                        </li>
-                                        <li class="py-3">
-                                            <a href="form-layout/form-layout.html" class="nav-link color">Form Layouts</a>
-                                        </li>                                        
-                                        <li class="py-3">
-                                            <a href="form-elements/form-elements.html" class="nav-link color">Form Elements</a>   
-                                        </li>
-                                        <li class="py-3">
-                                            <a href="form-validate/form-validate.html" class="nav-link color">Form validation</a>   
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button
-                                            class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#accordion-three"
-                                        >
-                                            <h5><i class="fa-solid fa-table-list"></i></h5>
-                                            <h5>Tables</h5>
-                                        </button>
-                                    </h2>
-                                    <ul
-                                        id="accordion-three"
-                                        data-bs-parent="#accordion"
-                                        class="accordion-collapse collapse"
-                                    >
-                                        <li class="py-3">
-                                            <a href="general-table/general-table.html" class="nav-link color">General Tables</a>
-                                        </li>
-                                        <li class="py-3">
-                                            <a href="data-table/data-table.html" class="nav-link color">Data Tables</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button
-                                            class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#accordion-four"
-                                        >
-                                            
-                                            <h5><i class="fa-solid fa-chart-pie"></i></h5>
-                                            <h5>Charts</h5>
-                                        </button>
-                                    </h2>
-                                    <ul
-                                        id="accordion-four"
-                                        class="accordion-collapse collapse"
-                                        data-bs-parent="#accordion"
-                                    >
-                                        <li class="py-3"><a href="charts/chart-js.html" class="nav-link color">Chart.js</a></li>
-                                        <li class="py-3"><a href="apex-charts/apex-charts.html" class="nav-link color">Apex Charts</a></li>
-                                        <li class="py-3"><a href="echart/echart.html" class="nav-link color">EChart</a></li>
-                                    </ul>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button
-                                            class="accordion-button collapsed d-flex justify-content-start align-items-start gap-3"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#accordion-five"
-                                        >
-                                            
-                                            <h5><i class="fa-solid fa-icons"></i></h5>
-                                            <h5>Icons</h5>
-                                        </button>
-                                    </h2>
-                                    <ul
-                                        class="collapse accordion-collapse"
-                                        data-bs-parent="accordion"
-                                        id="accordion-five"
-                                    >
-                                            <li class="py-3">
-                                                <a href="bootstrabicons/bootstrabicons.html" class="nav-link color">Bootstrab Icons</a>
-                                            </li>
-                                            <li class="py-3">
-                                                <a href="remix-icons/remix-icons.html" class="nav-link color">Remix Icons</a>
-                                            </li>
-                                            <li class="py-3">
-                                                <a href="box-icons/box-icons.html" class="nav-link color">Box Icons</a>
-                                            </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p>pages</p>
-                            <div class="accordion">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button not-accordion">
-                                            <a
-                                                    href="profile/profile.html"
-                                                    class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
-                                                    ><h5><i class="fa-regular fa-user"></i></h5><h5>profile</h5></a
-                                                >
-                                        </button>
-                                    </h2>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button not-accordion">
-                                            <a
-                                                    href="faq/faq.html"
-                                                    class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
-                                                    ><h5><i class="fa-regular fa-circle-question"></i></h5><h5>F . A . Q</h5></a
-                                                >
-                                        </button>
-                                    </h2>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button not-accordion">
-                                            <a
-                                                    href="contact/contact.html"
-                                                    class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
-                                                    ><h5><i class="fa-regular fa-envelope"></i></h5><h5>Contact</h5></a
-                                                >
-                                        </button>
-                                    </h2>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button not-accordion">
-                                            <a
-                                                    href="register/register.html"
-                                                    class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
-                                                    ><h5><i class="fa-regular fa-rectangle-list"></i></h5><h5>Register</h5></a
-                                                >
-                                        </button>
-                                    </h2>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button not-accordion">
-                                            <a
-                                                    href="log-in/log-in.html"
-                                                    class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
-                                                    ><h5><i class="fa-solid fa-right-to-bracket"></i><h5>Log In</h5></a
-                                                >
-                                        </button>
-                                    </h2>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button not-accordion">
-                                            <a
-                                                    href="error 404/error404.html"
-                                                    class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
-                                                    ><h5><i class="fa-solid fa-triangle-exclamation"></i><h5>Error 404</h5></a
-                                                >
-                                        </button>
-                                    </h2>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button not-accordion">
-                                            <a
-                                                    href="blank/blank.html"
-                                                    class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
-                                                    ><h5><i class="fa-regular fa-file"></i><h5>Blank</h5></a
-                                                >
-                                        </button>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <div class="fixing-nav"></div>
-            <h1 class="color">Dashboard</h1>
-            <nav>
-                <ol class="breadcrumb bg-light">
-                    <li class="breadcrumb-item"><a class="text-decoration-none" href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Dashboard</li>
-                </ol>
-            </nav>
-    
-            
-                <main class="gap-4">
-                    <div id="offcanvas-space"></div>
-                    <section id="first-column" class="row d-flex gap-4">
-                        <div class="col-4 card shadow">
-                            <div class="card-header">
-                                <h5 class="card-title">
-                                    <nav>
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item color fs-4">Sales</li>
-                                            <li class="breadcrumb-item active">Today</li>
-                                        </ol>
-                                    </nav>
-                                </h5>
-                            </div>
-                            <div class="card-body d-flex gap-5 align-items-center">
-                                <i
-                                    class="fa-solid fa-cart-shopping rounded-circle bg-primary-subtle fs-4 align-items-center justify-content-center d-flex text-primary"
-                                    style="width: 50px; height: 50px"
-                                ></i>
-                                <div>
-                                    <h3 class="color">145</h3>
-                                    <p>
-                                        <strong class="text-success">12%</strong>
-                                        increase
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4 card shadow card_with_js">
-                            <div class="card-header">
-                                <h5 class="card-title">
-                                    <nav>
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item color">Revenue</li>
-                                            <li class="breadcrumb-item active">This Month</li>
-                                        </ol>
-                                    </nav>
-                                </h5>
-                            </div>
-                            <div class="card-body d-flex gap-5 align-items-center">
-                                <i
-                                    class="fa-solid fa-dollar-sign rounded-circle bg-success-subtle fs-4 align-items-center justify-content-center d-flex text-success"
-                                    style="width: 50px; height: 50px"
-                                ></i>
-                                <div>
-                                    <h3 class="color">3,264$</h3>
-                                    <p>
-                                        <strong class="text-success">8%</strong>
-                                        increase
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-8 card shadow card_with_js">
-                            <div class="card-header">
-                                <h5 class="card-title">
-                                    <nav>
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item color">Customers</li>
-                                            <li class="breadcrumb-item active">This Year</li>
-                                        </ol>
-                                    </nav>
-                                </h5>
-                            </div>
-                            <div class="card-body d-flex gap-5 align-items-center">
-                                <i
-                                    class="fa-solid fa-users rounded-circle bg-danger-subtle fs-4 align-items-center justify-content-center d-flex text-danger"
-                                    style="width: 50px; height: 50px"
-                                ></i>
-        
-                                <div>
-                                    <h3 class="color">1244</h3>
-                                    <p>
-                                        <strong class="text-danger">12%</strong>
-                                        decrease
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="chart-card" class="card shadow p-2">
-                            <h5 class="card-title">
-                                <nav class="p-3 ">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item color">Reports</li>
-                                        <li class="breadcrumb-item active">Today</li>
-                                    </ol>
-                                </nav>
-                            </h5>
-                            <div class="card-body">
-                                <canvas id="chart2"></canvas>
-                            </div>
-                        </div>
-                        <div class="card shadow p-4">
-                            <h5 class="card-title">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a class="nav-link color" href="#">Recent Sales</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Today</li>
-                                    </ol>
-                                </nav>
-                            </h5>
-                            <div class="card-body p-4">
-                                <table class="datatable">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Customer</th>
-                                            <th scope="col">Product</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col">Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="card shadow">
-                            <h5 class="card-title p-3">
-                                <nav>
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item color">Top Selling</li>
-                                        <li class="breadcrumb-item active">Today</li>
-                                    </ol>
-                                </nav>
-                            </h5>
-                            <div class="card-body">
-                                <table class="datatable datatable-wrapper" id="dataTable">
-                                    <thead>
-                                        <tr>
-                                            <th>Preview</th>
-                                            <th>Product</th>
-                                            <th>Price</th>
-                                            <th>Sold</th>
-                                            <th>Revenue</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tbody">
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </section>
-                    <section id="second-column" class="d-flex flex-column gap-4">
-                        <div id="recent-activities" class="shadow bg-body p-3">
-                            <nav>
-                                <ol class="breadcrumb bg-body">
-                                    <h5 class="breadcrumb-item color ">Recent Activities</h5>
-                                    <h5 class="breadcrumb-item active">Today</h5>
-                                </ol>
-                            </nav>
-                        <ul class="bg-body p-4">
-                            
-                            <span class="d-flex mb-3 justify-content-between">
-                                <p>32 min</p>
-                                <li class="w-50 special-lis special-lis-1">Lorem ipsum dolor sit amet</li>
-                            </span>
-                            <span class="d-flex mb-3 justify-content-between">
-                                <p>56 min</p>
-                                <li class="w-50 special-lis special-lis-2">Hic  reiciendis corporis ipsam vitae</li>
-                            </span>
-                            <span class="d-flex mb-3 justify-content-between">
-                                <p>2 hrs</p>
-                                <li class="w-50 special-lis special-lis-3">Illo  vitae facere tempora ex</li>
-                            </span>
-                            <span class="d-flex mb-3 justify-content-between">
-                                <p>1 day</p>
-                                <li class="w-50 special-lis special-lis-4"> nihil mollitia ipsam nam rem</li>
-                            </span>
-                            <span class="d-flex mb-3 justify-content-between">
-                                <p>2 days</p>
-                                <li class="w-50 special-lis special-lis-5">Porro  aperiam veritatis sunt dolor</li>
-                            </span>
-                            <span class="d-flex mb-3 justify-content-between">
-                                <p>4 weeks</p>
-                                <li class="w-50 special-lis special-lis-6">Est voluptatem blanditiis commodi veniam</li>
-                            </span>
-                        </ul>
-                        </div>
-                        <div class="card shadow p-4">
-                                    <nav aria-label="breadcrumb ">
-                                        <ol class="breadcrumb">
-                                            <h5 class="breadcrumb-item"><a class="nav-link color" href="#">Budget Report</a></h5>
-                                            <h5 class="breadcrumb-item active" aria-current="page">This Month</h5>
-                                        </ol>
-                                    </nav>
-                            <div class="card_body">
-                                <canvas id="chart"></canvas>
-                            </div>
-                        </div>
-                        <div class="card shadow">
-                            <div class="card-header bg-body border border-0">
-                                <h5 class="card-title">
-                                    <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a class="nav-link color" href="#">Website Traffic</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Today</li>
-                                        </ol>
-                                    </nav>
-                                </h5>
-                            </div>
-                            <div class="card-body">
-                                <canvas id="chart1"></canvas>
-                            </div>
-                        </div>
-                        <div class="card shadow">
-                            <div class="card-header bg-body border border-0">
-                                <h5 class="card-title">
-                                    <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a class="nav-link color" href="#">News & Updates</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Today</li>
-                                        </ol>
-                                    </nav>
-                                </h5>
-                            </div>
-                            <div class="card-body">
-                                <div class="card border-0 mb-3" style="max-width: 540px;">
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <img style="width: 100px;" src="imgs/img5.jpg" alt="image">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-primary">Lorem ipsum</h5>
-                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur adipisci itaque aperiam sunt rem </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card border-0 mb-3" style="max-width: 540px;">
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <img style="width: 100px;" src="imgs/img2.jpg" alt="image">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-primary">Lorem ipsum</h5>
-                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur adipisci itaque aperiam sunt rem </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><div class="card border-0 mb-3" style="max-width: 540px;">
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <img style="width: 100px;" src="imgs/img3.jpg" alt="image">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-primary">Lorem ipsum</h5>
-                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur adipisci itaque aperiam sunt rem </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><div class="card border-0 mb-3" style="max-width: 540px;">
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <img style="width: 100px;" src="imgs/img1.jpg" alt="image">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-primary">Lorem ipsum</h5>
-                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur adipisci itaque aperiam sunt rem </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><div class="card border-0 mb-3" style="max-width: 540px;">
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <img style="width: 100px;" src="imgs/img4.jpg" alt="image">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-primary">Lorem ipsum</h5>
-                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur adipisci itaque aperiam sunt rem </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </main>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NiceAdmin — Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/66944bb815.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- Mobile Overlay -->
+  <div id="sidebar-overlay"></div>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <img src="imgs/logo.png" alt="NiceAdmin">
+      <span class="brand-name">NiceAdmin</span>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li>
+          <a href="index.html" class="nav-link active">
+            <i class="fa-solid fa-table-cells-large"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li><span class="nav-section-label">Components</span></li>
+
+        <li>
+          <a href="#comp-sub" class="nav-link collapsed" data-bs-toggle="collapse">
+            <i class="fa-regular fa-chart-bar"></i>
+            <span>UI Components</span>
+            <i class="fa-solid fa-chevron-down arrow"></i>
+          </a>
+          <ul class="sidebar-submenu collapse" id="comp-sub">
+            <li><a href="alert/alert.html" class="nav-link">Alerts</a></li>
+            <li><a href="accordions/accordion.html" class="nav-link">Accordion</a></li>
+            <li><a href="badges/badges.html" class="nav-link">Badges</a></li>
+            <li><a href="bread-crumb/bread-crumb.html" class="nav-link">Breadcrumbs</a></li>
+            <li><a href="buttons/buttons.html" class="nav-link">Buttons</a></li>
+            <li><a href="cards/cards.html" class="nav-link">Cards</a></li>
+            <li><a href="carousel/carousel.html" class="nav-link">Carousel</a></li>
+            <li><a href="List-group/List-group.html" class="nav-link">List Group</a></li>
+            <li><a href="modal/modal.html" class="nav-link">Modal</a></li>
+            <li><a href="Taps/Taps.html" class="nav-link">Tabs</a></li>
+            <li><a href="pagination/pagination.html" class="nav-link">Pagination</a></li>
+            <li><a href="progress/progress.html" class="nav-link">Progress</a></li>
+            <li><a href="spinners/spinners.html" class="nav-link">Spinners</a></li>
+            <li><a href="tooltips/tooltips.html" class="nav-link">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#forms-sub" class="nav-link collapsed" data-bs-toggle="collapse">
+            <i class="fa-regular fa-address-card"></i>
+            <span>Forms</span>
+            <i class="fa-solid fa-chevron-down arrow"></i>
+          </a>
+          <ul class="sidebar-submenu collapse" id="forms-sub">
+            <li><a href="form-editors/form-editors.html" class="nav-link">Form Editors</a></li>
+            <li><a href="form-layout/form-layout.html" class="nav-link">Form Layouts</a></li>
+            <li><a href="form-elements/form-elements.html" class="nav-link">Form Elements</a></li>
+            <li><a href="form-validate/form-validate.html" class="nav-link">Form Validation</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#tables-sub" class="nav-link collapsed" data-bs-toggle="collapse">
+            <i class="fa-solid fa-table-list"></i>
+            <span>Tables</span>
+            <i class="fa-solid fa-chevron-down arrow"></i>
+          </a>
+          <ul class="sidebar-submenu collapse" id="tables-sub">
+            <li><a href="general-table/general-table.html" class="nav-link">General Tables</a></li>
+            <li><a href="data-table/data-table.html" class="nav-link">Data Tables</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#charts-sub" class="nav-link collapsed" data-bs-toggle="collapse">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Charts</span>
+            <i class="fa-solid fa-chevron-down arrow"></i>
+          </a>
+          <ul class="sidebar-submenu collapse" id="charts-sub">
+            <li><a href="charts/chart-js.html" class="nav-link">Chart.js</a></li>
+            <li><a href="apex-charts/apex-charts.html" class="nav-link">Apex Charts</a></li>
+            <li><a href="echart/echart.html" class="nav-link">EChart</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#icons-sub" class="nav-link collapsed" data-bs-toggle="collapse">
+            <i class="fa-solid fa-icons"></i>
+            <span>Icons</span>
+            <i class="fa-solid fa-chevron-down arrow"></i>
+          </a>
+          <ul class="sidebar-submenu collapse" id="icons-sub">
+            <li><a href="bootstrabicons/bootstrabicons.html" class="nav-link">Bootstrap Icons</a></li>
+            <li><a href="remix-icons/remix-icons.html" class="nav-link">Remix Icons</a></li>
+            <li><a href="box-icons/box-icons.html" class="nav-link">Box Icons</a></li>
+          </ul>
+        </li>
+
+        <li><span class="nav-section-label">Pages</span></li>
+
+        <li><a href="profile/profile.html" class="nav-link"><i class="fa-regular fa-user"></i><span>Profile</span></a></li>
+        <li><a href="faq/faq.html" class="nav-link"><i class="fa-regular fa-circle-question"></i><span>FAQ</span></a></li>
+        <li><a href="contact/contact.html" class="nav-link"><i class="fa-regular fa-envelope"></i><span>Contact</span></a></li>
+        <li><a href="register/register.html" class="nav-link"><i class="fa-regular fa-rectangle-list"></i><span>Register</span></a></li>
+        <li><a href="log-in/log-in.html" class="nav-link"><i class="fa-solid fa-right-to-bracket"></i><span>Log In</span></a></li>
+        <li><a href="error 404/error404.html" class="nav-link"><i class="fa-solid fa-triangle-exclamation"></i><span>Error 404</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="main-content">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <button class="topbar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="topbar-search">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="search" placeholder="Search...">
+      </div>
+      <div class="topbar-right">
+        <button class="topbar-icon-btn" title="Notifications">
+          <i class="fa-solid fa-bell"></i>
+          <span class="topbar-badge"></span>
+        </button>
+        <button class="topbar-icon-btn" title="Messages">
+          <i class="fa-solid fa-message"></i>
+          <span class="topbar-badge"></span>
+        </button>
+        <div class="topbar-divider"></div>
+        <div class="dropdown">
+          <button class="topbar-profile" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="imgs/profile-img.jpg" alt="Profile">
+            <div class="profile-info">
+              <div class="profile-name">Kevin Anderson</div>
+              <div class="profile-role">Web Designer</div>
             </div>
-            
-            <footer class="mt-4 d-flex flex-column justify-content-center align-items-center mt-5">
-                <p>© Copyright NiceAdmin. All Rights Reserved</p>
-                <p>Designed by <a class="text-decoration-none" href="https://bootstrapmade.com/">BootstrapMade</a></p>
-            </footer>
-            <script>
-                const offcanvas = document.querySelector("#offcanvasNavbar");
-                const body = document.body;
-                const chartCard = document.querySelector('#chart-card');
-                
-                offcanvas.addEventListener("show.bs.offcanvas", function () {
-                    body.classList.add("offcanvas-open");
-                    chartCard.classList.remove('chart-height');
-                });
-        
-                offcanvas.addEventListener("hide.bs.offcanvas", function () {
-                    body.classList.remove("offcanvas-open");
-                    chartCard.classList.add('chart-height');
-                });
-            </script>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <script>
-                const data = {
-                    labels: ['Sales','Marketing','Development','Customer support','Information Technology','Administration'],
-                    datasets:[{
-                        label:'Allocated Budget',
-                        data: [67 , 80 , 90 , 81 , 56, 55 , 67],
-                        fill:true,
-                        backgroundColor:'blue',
-                        borderColor:'blue',
-                        pointBackgroundColor:'black',
-                        pointHoverBackgroundColor:'white',
-                        pointHoverBorderColor:'red'
-                    },{
-                        label:'Actual Spending',
-                        data:[30,60,58,99,100,90,30],
-                        fill:true,
-                        backgroundColor:'green',
-                        borderColor:'green',
-                        pointBackgroundColor:'green',
-                        pointBorderColor:'black',
-                        pointHoverBackgroundColor:'black',
-                        pointHoverBorderColor:'green',
-                    }]
-                }
-                const config = {
-                    type: 'radar',
-                    data: data,
-                    options: {
-                        line: {
-                            borderWidth:3
-                        }
-                    }
-                }
-                const charts = document.querySelector('#chart').getContext('2d');
-                new Chart(charts , config);
-            </script>
-            <script>
-                const data1 = {
-                    labels: [
-                        'Search Engine',
-                        'Direct',
-                        'Email',
-                        'Union Ads',
-                        'Video Ads'
-                    ],
-                    datasets: [{
-                        label: 'My First Dataset',
-                        data: [2, 3, 2 , 3 ,4],
-                        backgroundColor: [
-                        'rgb(33, 33, 146)',
-                        'rgba(42, 110, 42, 0.76)',
-                        'rgb(233, 184, 23)',
-                        'rgb(221, 38, 69)',
-                        'rgb(24, 120, 150)'
-                        ],
-                        hoverOffset: 20,
-                        hoverBorderWidth: 5,
-                        hoverBorderColor:[
-                            'rgb(33, 33, 146)',
-                        'rgba(42, 110, 42, 0.76)',
-                        'rgb(233, 184, 23)',
-                        'rgb(221, 38, 69)',
-                        'rgb(24, 120, 150)'
-                        ]
+            <i class="fa-solid fa-chevron-down ms-1" style="font-size:0.65rem;color:var(--text-muted)"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end topbar-dropdown">
+            <li>
+              <div class="dropdown-header-custom">
+                <div class="dh-name">Kevin Anderson</div>
+                <div class="dh-role">Web Designer</div>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider my-1"></li>
+            <li><a class="dropdown-item" href="profile/profile.html"><i class="fa-regular fa-user me-2 text-muted"></i>My Profile</a></li>
+            <li><a class="dropdown-item" href="profile/profile.html"><i class="fa-solid fa-gear me-2 text-muted"></i>Account Settings</a></li>
+            <li><a class="dropdown-item" href="faq/faq.html"><i class="fa-regular fa-circle-question me-2 text-muted"></i>Need Help?</a></li>
+            <li><hr class="dropdown-divider my-1"></li>
+            <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-right-from-bracket me-2"></i>Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
-                        }]
-                    };
-                    const config1 = {
-                        type: 'doughnut',
-                        data: data1,
-                        options:{
-                            animation:false,
-                            
-                        }
-                        };
-                    const canvas = document.querySelector('#chart1');
-                    new Chart(canvas , config1)
-            </script>
-            <script>
-                const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'];
+    <!-- Page Content -->
+    <main class="page-content">
+      <div class="page-header">
+        <h1 class="page-title">Dashboard</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard</li>
+          </ol>
+        </nav>
+      </div>
 
-const data2 = {
-    labels: labels,
-    datasets: [
+      <!-- Stat Cards -->
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-xl-3">
+          <div class="card stat-card primary">
+            <div class="stat-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <div class="stat-label">Sales</div>
+            <div class="stat-value">145</div>
+            <div class="stat-change"><i class="fa-solid fa-arrow-trend-up"></i> 12% increase today</div>
+          </div>
+        </div>
+        <div class="col-6 col-xl-3">
+          <div class="card stat-card success">
+            <div class="stat-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+            <div class="stat-label">Revenue</div>
+            <div class="stat-value">$3,264</div>
+            <div class="stat-change"><i class="fa-solid fa-arrow-trend-up"></i> 8% increase this month</div>
+          </div>
+        </div>
+        <div class="col-6 col-xl-3">
+          <div class="card stat-card warning">
+            <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="stat-label">Customers</div>
+            <div class="stat-value">1,244</div>
+            <div class="stat-change"><i class="fa-solid fa-arrow-trend-down"></i> 12% decrease this year</div>
+          </div>
+        </div>
+        <div class="col-6 col-xl-3">
+          <div class="card stat-card danger">
+            <div class="stat-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="stat-label">Conversion</div>
+            <div class="stat-value">5.2%</div>
+            <div class="stat-change"><i class="fa-solid fa-arrow-trend-up"></i> 3% increase today</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reports + Recent Activities -->
+      <div class="row g-3 mb-4">
+        <div class="col-xl-8">
+          <div class="card h-100">
+            <div class="card-header">
+              Reports
+              <span class="card-subtitle-text">Today</span>
+            </div>
+            <div class="card-body">
+              <canvas id="chart2"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="card h-100">
+            <div class="card-header">
+              Recent Activities
+              <span class="card-subtitle-text">Today</span>
+            </div>
+            <div class="card-body p-0">
+              <ul class="activity-feed">
+                <li class="activity-item">
+                  <div class="activity-dot" style="background:var(--primary)"></div>
+                  <div class="activity-text">Lorem ipsum dolor sit amet</div>
+                  <div class="activity-time">32 min ago</div>
+                </li>
+                <li class="activity-item">
+                  <div class="activity-dot" style="background:var(--success)"></div>
+                  <div class="activity-text">Hic reiciendis corporis ipsam vitae</div>
+                  <div class="activity-time">56 min ago</div>
+                </li>
+                <li class="activity-item">
+                  <div class="activity-dot" style="background:var(--warning)"></div>
+                  <div class="activity-text">Illo vitae facere tempora ex lorem</div>
+                  <div class="activity-time">2 hrs ago</div>
+                </li>
+                <li class="activity-item">
+                  <div class="activity-dot" style="background:var(--danger)"></div>
+                  <div class="activity-text">Nihil mollitia ipsam nam rem</div>
+                  <div class="activity-time">1 day ago</div>
+                </li>
+                <li class="activity-item">
+                  <div class="activity-dot" style="background:var(--info)"></div>
+                  <div class="activity-text">Porro aperiam veritatis sunt dolor</div>
+                  <div class="activity-time">2 days ago</div>
+                </li>
+                <li class="activity-item">
+                  <div class="activity-dot" style="background:#8338ec"></div>
+                  <div class="activity-text">Est voluptatem blanditiis commodi</div>
+                  <div class="activity-time">4 weeks ago</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Sales Table -->
+      <div class="row g-3 mb-4">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              Recent Sales
+              <span class="card-subtitle-text">Today</span>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table id="recentSalesTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Customer</th>
+                      <th>Product</th>
+                      <th>Price</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Budget + Traffic + News -->
+      <div class="row g-3 mb-4">
+        <div class="col-xl-4">
+          <div class="card h-100">
+            <div class="card-header">
+              Budget Report
+              <span class="card-subtitle-text">This Month</span>
+            </div>
+            <div class="card-body">
+              <canvas id="chart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="card h-100">
+            <div class="card-header">
+              Website Traffic
+              <span class="card-subtitle-text">Today</span>
+            </div>
+            <div class="card-body">
+              <canvas id="chart1"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="card h-100">
+            <div class="card-header">
+              News &amp; Updates
+              <span class="card-subtitle-text">Today</span>
+            </div>
+            <div class="card-body p-0">
+              <div class="news-feed">
+                <div class="news-item">
+                  <img src="imgs/img5.jpg" alt="news">
+                  <div>
+                    <div class="news-title">Lorem ipsum dolor sit amet</div>
+                    <div class="news-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur adipisci itaque aperiam.</div>
+                  </div>
+                </div>
+                <div class="news-item">
+                  <img src="imgs/img2.jpg" alt="news">
+                  <div>
+                    <div class="news-title">Sed ut perspiciatis unde</div>
+                    <div class="news-text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</div>
+                  </div>
+                </div>
+                <div class="news-item">
+                  <img src="imgs/img3.jpg" alt="news">
+                  <div>
+                    <div class="news-title">At vero eos accusamus</div>
+                    <div class="news-text">Et iusto odio dignissimos ducimus qui blanditiis praesentium.</div>
+                  </div>
+                </div>
+                <div class="news-item">
+                  <img src="imgs/img1.jpg" alt="news">
+                  <div>
+                    <div class="news-title">Nam libero tempore</div>
+                    <div class="news-text">Temporibus autem quibusdam et aut officiis debitis rerum necessitatibus.</div>
+                  </div>
+                </div>
+                <div class="news-item">
+                  <img src="imgs/img4.jpg" alt="news">
+                  <div>
+                    <div class="news-title">Quis autem vel eum</div>
+                    <div class="news-text">Ut enim ad minima veniam quis nostrum exercitationem ullam.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Selling Table -->
+      <div class="row g-3">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              Top Selling
+              <span class="card-subtitle-text">Today</span>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table id="dataTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Preview</th>
+                      <th>Product</th>
+                      <th>Price</th>
+                      <th>Sold</th>
+                      <th>Revenue</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <p>© Copyright NiceAdmin. All Rights Reserved</p>
+      <p>Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></p>
+    </footer>
+  </div><!-- /.main-content -->
+</div><!-- /.wrapper -->
+
+<script>
+  const sidebarToggle = document.getElementById('sidebarToggle');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebar-overlay');
+
+  sidebarToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('show');
+    overlay.classList.toggle('show');
+  });
+  overlay.addEventListener('click', () => {
+    sidebar.classList.remove('show');
+    overlay.classList.remove('show');
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const chartColors = {
+    primary: '#4361ee',
+    success: '#2eca6a',
+    warning: '#ffab00',
+    danger:  '#ff4560',
+    info:    '#4cc9f0',
+    purple:  '#8338ec',
+  };
+
+  // Budget Report — Radar
+  new Chart(document.getElementById('chart'), {
+    type: 'radar',
+    data: {
+      labels: ['Sales', 'Marketing', 'Dev', 'Support', 'IT', 'Admin'],
+      datasets: [
         {
-            label: 'Dataset 1',
-            data: [65, 59, 80, 81, 56, 55, 40],
-            borderColor: 'red',
-            backgroundColor: 'rgba(255, 0, 0, 0.2)',
-            fill: false,
-            tension: 0.4
+          label: 'Allocated Budget',
+          data: [67, 80, 90, 81, 56, 55],
+          fill: true,
+          backgroundColor: 'rgba(67,97,238,0.12)',
+          borderColor: chartColors.primary,
+          pointBackgroundColor: chartColors.primary,
+          pointBorderColor: '#fff',
+          borderWidth: 2,
         },
         {
-            label: 'Dataset 2',
-            data: [28, 48, 40, 19, 86, 27, 90],
-            borderColor: 'blue',
-            backgroundColor: 'rgba(0, 0, 255, 0.2)',
-            fill: false,
-            tension: 0.4
-        },
-        {
-            label: 'Dataset 3',
-            data: [45, 25, 60, 70, 40, 80, 50],
-            borderColor: 'green',
-            backgroundColor: 'rgba(0, 255, 0, 0.2)',
-            fill: false,
-            tension: 0.4
+          label: 'Actual Spending',
+          data: [30, 60, 58, 99, 100, 90],
+          fill: true,
+          backgroundColor: 'rgba(46,202,106,0.12)',
+          borderColor: chartColors.success,
+          pointBackgroundColor: chartColors.success,
+          pointBorderColor: '#fff',
+          borderWidth: 2,
         }
-    ]
-};
-
-const config2 = {
-    type: 'line',
-    data: data2,
+      ]
+    },
     options: {
-        responsive: true,
-        interaction: {
-            mode: 'index',
-            intersect: false
-        },
-        plugins: {
-            legend: {
-                display: true
-            },
-            tooltip: {
-                mode: 'index',
-                intersect: false
-            }
-        },
-        scales: {
-            x: {
-                grid: {
-                    drawBorder: false,
-                    drawOnChartArea: false, 
-                    drawTicks: false
-                }
-            },
-            y: {
-                grid: {
-                    borderDash: [5, 5]
-                }
-            }
-        }
+      plugins: { legend: { position: 'bottom', labels: { padding: 16, font: { size: 12 } } } }
     }
-};
+  });
 
-const myChart = new Chart(
-    document.getElementById('chart2'),
-    config2
-);
-            </script>
-            <script>
-                document.addEventListener("DOMContentLoaded", async function () {
-                    const res = await fetch('https://dummyjson.com/users?limit=5');
-                    const data = await res.json();
-                    console.log(data)
-                    const tbody = document.querySelector('tbody');
-                    data.users.forEach(user => {
-                        tbody.innerHTML += `
-                            <tr>
-                                <th scope="row"><a href="#" class='text-decoration-none'>#${user.address.postalCode}</a></th>
-                                <td>${user.firstName} ${user.lastName}</td>
-                                <td><a href="#" class='text-decoration-none'>Lorem ipsum</a></td>
-                                <td>${Math.round(user.company.address.coordinates.lat)} $</td>
-                                <td><div class='badge bg-success'>approved</div></td>
-                            </tr>
-                        `;
-                    });
-        
-                    setTimeout(() => {
-                        const datatable = new simpleDatatables.DataTable(".datatable");
-                    }, 100); 
-                });
-            </script>
-            <script type="module">
-                document.addEventListener("DOMContentLoaded", async function () {
-                    const res = await fetch('https://dummyjson.com/products?limit=100&skip=30');
-                    const data = await res.json();
-                    console.log(data)
-                    const tbody = document.querySelector('#tbody');
-                    data.products.forEach(product => {
-                        tbody.innerHTML += `
-                            <tr>
-                                <td><img src='${product.images[0]}' alt='the product'></td>
-                                <td>${product.title}</td>
-                                <td>${product.price} $</td>
-                                <td>${250-(product.stock)}</td>
-                                <td>${(product.price * 0.2).toFixed(2)} $</td>
-                            </tr>
-                        `;
-                    });
-        
-                    setTimeout(() => {
-                        const datatable = new simpleDatatables.DataTable("#dataTable");
-                    }, 100); 
-                });
-            </script>
-            
-    </body>
-    
+  // Website Traffic — Doughnut
+  new Chart(document.getElementById('chart1'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Search Engine', 'Direct', 'Email', 'Union Ads', 'Video Ads'],
+      datasets: [{
+        data: [2, 3, 2, 3, 4],
+        backgroundColor: [chartColors.primary, chartColors.success, chartColors.warning, chartColors.danger, chartColors.info],
+        hoverOffset: 10,
+        borderWidth: 0,
+      }]
+    },
+    options: {
+      animation: false,
+      plugins: { legend: { position: 'bottom', labels: { padding: 14, font: { size: 11 } } } },
+      cutout: '65%',
+    }
+  });
+
+  // Reports — Line
+  new Chart(document.getElementById('chart2'), {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+      datasets: [
+        {
+          label: 'Sales',
+          data: [65, 59, 80, 81, 56, 55, 40],
+          borderColor: chartColors.primary,
+          backgroundColor: 'rgba(67,97,238,0.07)',
+          fill: true, tension: 0.4, borderWidth: 2,
+          pointBackgroundColor: chartColors.primary, pointRadius: 4,
+        },
+        {
+          label: 'Revenue',
+          data: [28, 48, 40, 19, 86, 27, 90],
+          borderColor: chartColors.success,
+          backgroundColor: 'rgba(46,202,106,0.07)',
+          fill: true, tension: 0.4, borderWidth: 2,
+          pointBackgroundColor: chartColors.success, pointRadius: 4,
+        },
+        {
+          label: 'Customers',
+          data: [45, 25, 60, 70, 40, 80, 50],
+          borderColor: chartColors.warning,
+          backgroundColor: 'rgba(255,171,0,0.07)',
+          fill: true, tension: 0.4, borderWidth: 2,
+          pointBackgroundColor: chartColors.warning, pointRadius: 4,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'top', labels: { padding: 16, font: { size: 12 } } },
+        tooltip: { mode: 'index', intersect: false }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { color: '#94a3b8' } },
+        y: { grid: { color: '#f1f5f9' }, ticks: { color: '#94a3b8' } }
+      }
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', async function () {
+    const statuses = ['Approved', 'Pending', 'Approved', 'Approved', 'Declined'];
+    const statusClass = { Approved: 'status-approved', Pending: 'status-pending', Declined: 'status-declined' };
+    try {
+      const res = await fetch('https://dummyjson.com/users?limit=5');
+      const data = await res.json();
+      const tbody = document.querySelector('#recentSalesTable tbody');
+      data.users.forEach((user, i) => {
+        const status = statuses[i] || 'Approved';
+        tbody.innerHTML += `
+          <tr>
+            <td><a href="#" class="text-decoration-none fw-semibold" style="color:var(--primary)">#${user.address.postalCode}</a></td>
+            <td>${user.firstName} ${user.lastName}</td>
+            <td><a href="#" class="text-decoration-none" style="color:var(--text-primary)">Lorem ipsum</a></td>
+            <td class="fw-semibold">$${Math.abs(Math.round(user.company.address.coordinates.lat))}</td>
+            <td><span class="status-badge ${statusClass[status]}">${status}</span></td>
+          </tr>
+        `;
+      });
+      setTimeout(() => new simpleDatatables.DataTable('#recentSalesTable'), 100);
+    } catch (e) { console.error('Could not load recent sales', e); }
+  });
+</script>
+
+<script type="module">
+  document.addEventListener('DOMContentLoaded', async function () {
+    try {
+      const res = await fetch('https://dummyjson.com/products?limit=100&skip=30');
+      const data = await res.json();
+      const tbody = document.getElementById('tbody');
+      data.products.forEach(product => {
+        tbody.innerHTML += `
+          <tr>
+            <td><img class="table-product-img" src="${product.images[0]}" alt="${product.title}"></td>
+            <td class="fw-semibold">${product.title}</td>
+            <td>$${product.price}</td>
+            <td>${250 - product.stock}</td>
+            <td class="fw-semibold" style="color:var(--success)">$${(product.price * 0.2).toFixed(2)}</td>
+          </tr>
+        `;
+      });
+      setTimeout(() => new simpleDatatables.DataTable('#dataTable'), 100);
+    } catch (e) { console.error('Could not load products', e); }
+  });
+</script>
+
+</body>
 </html>

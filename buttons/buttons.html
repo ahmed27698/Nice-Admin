@@ -1,505 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>buttons</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous"
-        />
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://kit.fontawesome.com/66944bb815.js"
-            crossorigin="anonymous"
-        ></script>
-        <link rel="stylesheet" href="buttons.css" />
-    </head>
-    <body class="bg-light">
-        <nav class="navbar fixed-top shadow">
-            <div class="container-fluid">
-                <div>
-                    <a href="../index.html"><img src="../imgs/logo.png" alt="logo" /></a>
-                    <a class="navbar-brand" href="../index.html">Nice Admin</a>
-                </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NiceAdmin — Buttons</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/66944bb815.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrapper">
+  <div id="sidebar-overlay"></div>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <img src="../imgs/logo.png" alt="NiceAdmin">
+      <span class="brand-name">NiceAdmin</span>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="../index.html" class="nav-link"><i class="fa-solid fa-table-cells-large"></i><span>Dashboard</span></a></li>
+        <li><span class="nav-section-label">Components</span></li>
+        <li>
+          <a href="#comp-sub" class="nav-link" data-bs-toggle="collapse">
+            <i class="fa-regular fa-chart-bar"></i><span>UI Components</span>
+            <i class="fa-solid fa-chevron-down arrow"></i>
+          </a>
+          <ul class="sidebar-submenu collapse show" id="comp-sub">
+            <li><a href="../alert/alert.html" class="nav-link">Alerts</a></li>
+            <li><a href="../accordions/accordion.html" class="nav-link">Accordion</a></li>
+            <li><a href="../badges/badges.html" class="nav-link">Badges</a></li>
+            <li><a href="../bread-crumb/bread-crumb.html" class="nav-link">Breadcrumbs</a></li>
+            <li><a href="../buttons/buttons.html" class="nav-link active">Buttons</a></li>
+            <li><a href="../cards/cards.html" class="nav-link">Cards</a></li>
+            <li><a href="../carousel/carousel.html" class="nav-link">Carousel</a></li>
+            <li><a href="../List-group/List-group.html" class="nav-link">List Group</a></li>
+            <li><a href="../modal/modal.html" class="nav-link">Modal</a></li>
+            <li><a href="../Taps/Taps.html" class="nav-link">Tabs</a></li>
+            <li><a href="../pagination/pagination.html" class="nav-link">Pagination</a></li>
+            <li><a href="../progress/progress.html" class="nav-link">Progress</a></li>
+            <li><a href="../spinners/spinners.html" class="nav-link">Spinners</a></li>
+            <li><a href="../tooltips/tooltips.html" class="nav-link">Tooltips</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#forms-sub" class="nav-link collapsed" data-bs-toggle="collapse">
+            <i class="fa-regular fa-address-card"></i><span>Forms</span>
+            <i class="fa-solid fa-chevron-down arrow"></i>
+          </a>
+          <ul class="sidebar-submenu collapse" id="forms-sub">
+            <li><a href="../form-editors/form-editors.html" class="nav-link">Form Editors</a></li>
+            <li><a href="../form-layout/form-layout.html" class="nav-link">Form Layouts</a></li>
+            <li><a href="../form-elements/form-elements.html" class="nav-link">Form Elements</a></li>
+            <li><a href="../form-validate/form-validate.html" class="nav-link">Form Validation</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#tables-sub" class="nav-link collapsed" data-bs-toggle="collapse">
+            <i class="fa-solid fa-table-list"></i><span>Tables</span>
+            <i class="fa-solid fa-chevron-down arrow"></i>
+          </a>
+          <ul class="sidebar-submenu collapse" id="tables-sub">
+            <li><a href="../general-table/general-table.html" class="nav-link">General Tables</a></li>
+            <li><a href="../data-table/data-table.html" class="nav-link">Data Tables</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#charts-sub" class="nav-link collapsed" data-bs-toggle="collapse">
+            <i class="fa-solid fa-chart-pie"></i><span>Charts</span>
+            <i class="fa-solid fa-chevron-down arrow"></i>
+          </a>
+          <ul class="sidebar-submenu collapse" id="charts-sub">
+            <li><a href="../charts/chart-js.html" class="nav-link">Chart.js</a></li>
+            <li><a href="../apex-charts/apex-charts.html" class="nav-link">Apex Charts</a></li>
+            <li><a href="../echart/echart.html" class="nav-link">EChart</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#icons-sub" class="nav-link collapsed" data-bs-toggle="collapse">
+            <i class="fa-solid fa-icons"></i><span>Icons</span>
+            <i class="fa-solid fa-chevron-down arrow"></i>
+          </a>
+          <ul class="sidebar-submenu collapse" id="icons-sub">
+            <li><a href="../bootstrabicons/bootstrabicons.html" class="nav-link">Bootstrap Icons</a></li>
+            <li><a href="../remix-icons/remix-icons.html" class="nav-link">Remix Icons</a></li>
+            <li><a href="../box-icons/box-icons.html" class="nav-link">Box Icons</a></li>
+          </ul>
+        </li>
+        <li><span class="nav-section-label">Pages</span></li>
+        <li><a href="../profile/profile.html" class="nav-link"><i class="fa-regular fa-user"></i><span>Profile</span></a></li>
+        <li><a href="../faq/faq.html" class="nav-link"><i class="fa-regular fa-circle-question"></i><span>FAQ</span></a></li>
+        <li><a href="../contact/contact.html" class="nav-link"><i class="fa-regular fa-envelope"></i><span>Contact</span></a></li>
+        <li><a href="../register/register.html" class="nav-link"><i class="fa-regular fa-rectangle-list"></i><span>Register</span></a></li>
+        <li><a href="../log-in/log-in.html" class="nav-link"><i class="fa-solid fa-right-to-bracket"></i><span>Log In</span></a></li>
+        <li><a href="../error 404/error404.html" class="nav-link"><i class="fa-solid fa-triangle-exclamation"></i><span>Error 404</span></a></li>
+      </ul>
+    </nav>
+  </aside>
 
-                <div id="center-nav" class="d-flex">
-                    <button
-                        class="navbar-toggler"
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar"
-                        id="hamburger-icon"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <form class="d-flex">
-                        <input
-                            class="form-control me-2"
-                            type="search"
-                            placeholder="Search"
-                            id="input-center-nav"
-                        />
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </form>
-                </div>
-                <div
-                    id="right-nav"
-                    class="d-flex align-items-center gap-4"
-                >
-                    <i class="fa-solid fa-bell text-primary fs-4"></i>
-                    <i class="fa-solid fa-message text-success fs-4"></i>
-                    <div>
-                        <span
-                            class="dropdown-toggle d-flex align-items-center me-3 gap-3"
-                            data-bs-toggle="dropdown"
-                        >
-                            <img
-                                id="profile-img"
-                                src="../imgs/profile-img.jpg"
-                                alt="profile"
-                                class="rounded-circle"
-                            />
-                            <p id="profile-name">k.Anderson</p>
-                        </span>
-                        <ul
-                            class="dropdown-menu dropdown-menu-end dropdown-menu-light me-3"
-                        >
-                            <li class="text-center">
-                                <h5 id="profile-name">Kevin Anderson</h5>
-                                <p>Web Designer</p>
-                            </li>
-                            <li>
-                                <a class="dropdown-item fs-5" href="../profile/profile.html"
-                                    >My Profile</a
-                                >
-                            </li>
-                            <li>
-                                <a class="dropdown-item fs-5" href="../profile/profile.html"
-                                    >Account Settings</a
-                                >
-                            </li>
-                            <li>
-                                <a class="dropdown-item fs-5" href="../faq/faq.html"
-                                    >Need Help?</a
-                                >
-                            </li>
-                            <li>
-                                <a class="dropdown-item fs-5" href="#"
-                                    >Sign Out</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div
-                    class="offcanvas offcanvas-start shadow show"
-                    id="offcanvasNavbar"
-                >
-                    <div class="offcanvas-body">
-                        <div class="accordion" id="accordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button
-                                        class="accordion-button not-accordion"
-                                    >
-                                        <a
-                                            href="../index.html"
-                                            class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3 color"
-                                            ><h5><i class="fa-solid fa-table-cells-large"></i></h5><h5>Dashboard</h5></a
-                                        >
-                                    </button>
-                                </h2>
-                            </div>
-                            
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button
-                                        class="accordion-button collapsed d-flex align-items-center justify-content-start gap-3 color"
-                                        data-bs-target="#accordion-one"
-                                        data-bs-toggle="collapse"
-                                    >
-                                    <h5><i class="fa-regular fa-chart-bar"></i></h5>
-                                    <h5>components</h5>    
-                                    </button>
-                                </h2>
-                                <ul
-                                    class="accordion-collapse collapse"
-                                    id="accordion-one"
-                                    data-bs-parent="#accordion"
-                                >
-                                    <li class="py-3"><a href="../alert/alert.html" class="nav-link color">Alerts</a></li>
-                                    <li class="py-3"><a href="../accordions/accordion.html" class="nav-link color">Accordion</a></li>
-                                    <li class="py-3"><a href="../badges/badges.html" class="nav-link color ">Badges</a></li>
-                                    <li class="py-3"><a href="../bread-crumb/bread-crumb.html" class="nav-link color">Breadcrumbs</a></li>
-                                    <li class="py-3"><a href="../buttons/buttons.html" class="nav-link color">buttons</a></li>
-                                    <li class="py-3"><a href="../cards/cards.html" class="nav-link color">Cards</a></li>
-                                    <li class="py-3"><a href="../carousel/carousel.html" class="nav-link color">Carousel</a></li>
-                                    <li class="py-3"><a href="../List-group/List-group.html" class="nav-link color">List group</a></li>
-                                    <li class="py-3"><a href="../modal/modal.html" class="nav-link color">Modal</a></li>
-                                    <li class="py-3"><a href="../Taps/Taps.html" class="nav-link color">Taps</a></li>
-                                    <li class="py-3"><a href="../pagination/pagination.html" class="nav-link color">Pagination</a></li>
-                                    <li class="py-3"><a href="../progress/progress.html" class="nav-link color">Progress</a></li>
-                                    <li class="py-3"><a href="../spinners/spinners.html" class="nav-link color">Spinners</a></li>
-                                    <li class="py-3"><a href="../tooltips/tooltips.html" class="nav-link color">Tooltips</a></li>
-                                </ul>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button
-                                        class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#accordion-two"
-                                    >
-                                        <h5><i class="fa-regular fa-address-card"></i></h5>
-                                        <h5>Forms</h5>
-                                    </button>
-                                </h2>
-
-                                <ul
-                                    id="accordion-two"
-                                    data-bs-parent="#accordion"
-                                    class="accordion-collapse collapse"
-                                    data-bs-parent="#accordion"
-                                >
-                                    <li class="py-3">
-                                        <a href="../form-editors/form-editors.html" class="nav-link color">Form Editors</a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="../form-layout/form-layout.html" class="nav-link color">Form Layouts</a>
-                                    </li>                                        
-                                    <li class="py-3">
-                                        <a href="../form-elements/form-elements.html" class="nav-link color">Form Elements</a>   
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="../form-validate/form-validate.html" class="nav-link color">Form validation</a>   
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button
-                                        class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#accordion-three"
-                                    >
-                                        <h5><i class="fa-solid fa-table-list"></i></h5>
-                                        <h5>Tables</h5>
-                                    </button>
-                                </h2>
-                                <ul
-                                    id="accordion-three"
-                                    data-bs-parent="#accordion"
-                                    class="accordion-collapse collapse"
-                                >
-                                    <li class="py-3">
-                                        <a href="../general-table/general-table.html" class="nav-link color">General Tables</a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="../data-table/data-table.html" class="nav-link color">Data Tables</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button
-                                        class="accordion-button collapsed d-flex justify-content-start align-items-center gap-3"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#accordion-four"
-                                    >
-                                        
-                                        <h5><i class="fa-solid fa-chart-pie"></i></h5>
-                                        <h5>Charts</h5>
-                                    </button>
-                                </h2>
-                                <ul
-                                    id="accordion-four"
-                                    class="accordion-collapse collapse"
-                                    data-bs-parent="#accordion"
-                                >
-                                    <li class="py-3"><a href="../charts/chart-js.html" class="nav-link color">Chart.js</a></li>
-                                    <li class="py-3"><a href="../apex-charts/apex-charts.html" class="nav-link color">Apex Charts</a></li>
-                                    <li class="py-3"><a href="../echart/echart.html" class="nav-link color">EChart</a></li>
-                                </ul>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button
-                                        class="accordion-button collapsed d-flex justify-content-start align-items-start gap-3"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#accordion-five"
-                                    >
-                                        
-                                        <h5><i class="fa-solid fa-icons"></i></h5>
-                                        <h5>Icons</h5>
-                                    </button>
-                                </h2>
-                                <ul
-                                    class="collapse accordion-collapse"
-                                    data-bs-parent="accordion"
-                                    id="accordion-five"
-                                >
-                                        <li class="py-3">
-                                            <a href="../bootstrabicons/bootstrabicons.html" class="nav-link color">Bootstrab Icons</a>
-                                        </li>
-                                        <li class="py-3">
-                                            <a href="../remix-icons/remix-icons.html" class="nav-link color">Remix Icons</a>
-                                        </li>
-                                        <li class="py-3">
-                                            <a href="../box-icons/box-icons.html" class="nav-link color">Box Icons</a>
-                                        </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <p>pages</p>
-                        <div class="accordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button not-accordion">
-                                        <a
-                                                href="../profile/profile.html"
-                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
-                                                ><h5><i class="fa-regular fa-user"></i></h5><h5>profile</h5></a
-                                            >
-                                    </button>
-                                </h2>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button not-accordion">
-                                        <a
-                                                href="../faq/faq.html"
-                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
-                                                ><h5><i class="fa-regular fa-circle-question"></i></h5><h5>F . A . Q</h5></a
-                                            >
-                                    </button>
-                                </h2>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button not-accordion">
-                                        <a
-                                                href="../contact/contact.html"
-                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
-                                                ><h5><i class="fa-regular fa-envelope"></i></h5><h5>Contact</h5></a
-                                            >
-                                    </button>
-                                </h2>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button not-accordion">
-                                        <a
-                                                href="../register/register.html"
-                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
-                                                ><h5><i class="fa-regular fa-rectangle-list"></i></h5><h5>Register</h5></a
-                                            >
-                                    </button>
-                                </h2>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button not-accordion">
-                                        <a
-                                                href="../log-in/log-in.html"
-                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
-                                                ><h5><i class="fa-solid fa-right-to-bracket"></i><h5>Log In</h5></a
-                                            >
-                                    </button>
-                                </h2>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button not-accordion">
-                                        <a
-                                                href="../error 404/error404.html"
-                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
-                                                ><h5><i class="fa-solid fa-triangle-exclamation"></i><h5>Error 404</h5></a
-                                            >
-                                    </button>
-                                </h2>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button not-accordion">
-                                        <a
-                                                href="blank/blank.html"
-                                                class="nav-link w-100 h-100 d-flex align-items-center justify-content-start gap-3"
-                                                ><h5><i class="fa-regular fa-file"></i><h5>Blank</h5></a
-                                            >
-                                    </button>
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <div class="main-content">
+    <header class="topbar">
+      <button class="topbar-toggle" id="sidebarToggle"><i class="fa-solid fa-bars"></i></button>
+      <div class="topbar-search">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="search" placeholder="Search...">
+      </div>
+      <div class="topbar-right">
+        <button class="topbar-icon-btn"><i class="fa-solid fa-bell"></i><span class="topbar-badge"></span></button>
+        <button class="topbar-icon-btn"><i class="fa-solid fa-message"></i><span class="topbar-badge"></span></button>
+        <div class="topbar-divider"></div>
+        <div class="dropdown">
+          <button class="topbar-profile" data-bs-toggle="dropdown">
+            <img src="../imgs/profile-img.jpg" alt="Profile">
+            <div class="profile-info">
+              <div class="profile-name">Kevin Anderson</div>
+              <div class="profile-role">Web Designer</div>
             </div>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end topbar-dropdown">
+            <li><div class="dropdown-header-custom"><div class="dh-name">Kevin Anderson</div><div class="dh-role">Web Designer</div></div></li>
+            <li><hr class="dropdown-divider my-1"></li>
+            <li><a class="dropdown-item" href="../profile/profile.html"><i class="fa-regular fa-user me-2 text-muted"></i>My Profile</a></li>
+            <li><a class="dropdown-item" href="../profile/profile.html"><i class="fa-solid fa-gear me-2 text-muted"></i>Account Settings</a></li>
+            <li><a class="dropdown-item" href="../faq/faq.html"><i class="fa-regular fa-circle-question me-2 text-muted"></i>Need Help?</a></li>
+            <li><hr class="dropdown-divider my-1"></li>
+            <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-right-from-bracket me-2"></i>Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <div class="page-header">
+        <h1 class="page-title">Buttons</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item">Components</li>
+            <li class="breadcrumb-item active">Buttons</li>
+          </ol>
         </nav>
-        <div class="fixing-nav"></div>
-        <h1>Buttons</h1>
-        <nav style="--bs-breadcrumb-divider: '/'" aria-label="breadcrumb">
-            <ol class="breadcrumb bg-light">
-                <li class="breadcrumb-item">
-                    <a class="bread-crumb-not-active" href="../index.html"
-                        >Home</a
-                    >
-                </li>
-                <li class="breadcrumb-item">
-                    <a class="bread-crumb-not-active">Components</a>
-                </li>
-                <li class="breadcrumb-item active">Buttons</li>
-            </ol>
-        </nav>
-        <main class="d-flex justify-content-center align-items-center">
-            <section id="first-column" class="row gap-4 d-flex justify-content-center align-items-center">
-                <div class="col-lg-5">
-                    <div class="card shadow">
-                        <div class="card-header w-100">
-                            <h5 class="card-title">Default Buttons</h5>
-                        </div>
-                        <div class="card-body p-4 d-flex gap-3 flex-wrap">
-                            <div class="btn btn-primary">primary</div>
-                            <div class="btn btn-secondary">secondary</div>
-                            <div class="btn btn-success">success</div>
-                            <div class="btn btn-danger">danger</div>
-                            <div class="btn btn-warning">warning</div>
-                            <div class="btn btn-info">info</div>
-                            <div class="btn btn-light">light</div>
-                            <div class="btn btn-dark">dark</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="card shadow">
-                        <div class="card-header w-100">
-                            <h5 class="card-title">
-                                Rounded Buttons                            
-                            </h5>
-                        </div>
-                        <div class="card-body p-4">
-                            <div class="rounded-5 m-1 btn btn-primary">primary</div>
-                            <div class="rounded-5 m-1 btn btn-secondary">secondary</div>
-                            <div class="rounded-5 m-1 btn btn-success">success</div>
-                            <div class="rounded-5 m-1 btn btn-danger">danger</div>
-                            <div class="rounded-5 m-1 btn btn-warning">warning</div>
-                            <div class="rounded-5 m-1 btn btn-info">info</div>
-                            <div class="rounded-5 m-1 btn btn-light">light</div>
-                            <div class="rounded-5 m-1 btn btn-dark">dark</div>
-                        </div>
-                    </div>
-                </div>
-                <div id="the-problem" class="col-lg-5">
-                    <div class="card shadow">
-                        <div class="card-header w-100">
-                            <h5 class="card-title">Icon Buttons</h5>
-                        </div>
-                        <div class="card-body p-4 d-flex gap-3 flex-wrap">
-                            <div class="rounded-1 btn btn-primary"><i class="fa-solid fa-house"></i>With Text</div>
-                            <div class="rounded-1 btn btn-secondary"><i class="fa-solid fa-file"></i></div>
-                            <div class="rounded-1 btn btn-success"><i class="fa-solid fa-heart"></i></div>
-                            <div class="rounded-1 btn btn-danger"><i class="fa-solid fa-arrow-up-from-bracket"></i></div>
-                            <div class="rounded-1 btn btn-warning"><i class="fa-solid fa-circle-exclamation"></i></div>
-                            <div class="rounded-1 btn btn-info"><i class="fa-solid fa-address-book"></i></div>
-                            <div class="rounded-1 btn btn-light"><i class="fa-solid fa-circle"></i></div>
-                            <div class="rounded-1 btn btn-dark"><i class="fa-solid fa-notes-medical"></i></div>
-                        </div>
-                    </div>
-                </div>
+      </div>
 
-                <div class="col-lg-5">
-                    <div class="card shadow">
-                        <div class="card-header">
-                            <h5 class="card-title">Button Groups</h5>
-                        </div>
-                        <div class="card-body p-4 d-flex gap-3 flex-wrap justify-content-center">
-                            <div class="btn-group">
-                                <button class="btn btn-primary">Left</button>
-                                <button class="btn btn-primary">Middle</button>
-                                <button class="btn btn-primary">Right</button>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn btn-danger">Left</button>
-                                <button class="btn btn-success">Middle</button>
-                                <button class="btn btn-warning">Right</button>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn btn-outline-primary">Left</button>
-                                <button class="btn btn-outline-primary">Middle</button>
-                                <button class="btn btn-outline-primary">Right</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="card shadow">
-                        <div class="card-header w-100">
-                            <h5 class="card-title">
-                                Outline Buttons
-                            </h5>
-                        </div>
-                        <div class="card-body p-4">
-                            <div class="btn btn-outline-primary">primary</div>
-                            <div class="btn btn-outline-secondary">secondary</div>
-                            <div class="btn btn-outline-success">success</div>
-                            <div class="btn btn-outline-danger">danger</div>
-                            <div class="btn btn-outline-warning">warning</div>
-                            <div class="btn btn-outline-info">info</div>
-                            <div class="btn btn-outline-light">light</div>
-                            <div class="btn btn-outline-dark">dark</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="card shadow">
-                        <div class="card-header w-100">
-                            <h5 class="card-title">Button Sizes</h5>
-                        </div>
-                        <div class="card-body p-4 ">
-                            <div class="btn btn-primary btn-sm">small</div>
-                            <div class="btn btn-secondary">normal</div>
-                            <div class="btn btn-success btn-lg">large</div>
-                            <div class="btn btn-outline-danger btn-sm">small</div>
-                            <div class="btn btn-outline-warning">normal</div>
-                            <div class="btn btn-outline-info btn-lg">large</div>
-                            <button class="w-100 btn btn-primary my-3">block button</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="card shadow">
-                        <div class="card-header w-100">
-                            <h5 class="card-title">Button States</h5>
-                        </div>
-                        <div class="card-body p-4 d-flex gap-3 flex-wrap">
-                            <button class="btn btn-primary">normal</button>
-                            <button class="btn btn-primary"disabled>disabled</button>
-                            <button class="btn btn-outline-primary">normal</button>
-                            <button class="btn btn-outline-primary"disabled>disabled</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="d-flex flex-column justify-content-center align-items-center mt-5">
-            <p>© Copyright NiceAdmin. All Rights Reserved</p>
-            <p>Designed by <a class="text-decoration-none" href="https://bootstrapmade.com/">BootstrapMade</a></p>
-        </footer>
-        <script>
-            const offcanvas = document.querySelector("#offcanvasNavbar");
-            const body = document.body;
+      <div class="row g-4">
+        <div class="col-xl-6">
+          <div class="card shadow-sm">
+            <div class="card-header"><h5 class="card-title mb-0">Default Buttons</h5></div>
+            <div class="card-body d-flex gap-2 flex-wrap">
+              <button class="btn btn-primary">Primary</button>
+              <button class="btn btn-secondary">Secondary</button>
+              <button class="btn btn-success">Success</button>
+              <button class="btn btn-danger">Danger</button>
+              <button class="btn btn-warning">Warning</button>
+              <button class="btn btn-info">Info</button>
+              <button class="btn btn-light">Light</button>
+              <button class="btn btn-dark">Dark</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="card shadow-sm">
+            <div class="card-header"><h5 class="card-title mb-0">Rounded Buttons</h5></div>
+            <div class="card-body d-flex gap-2 flex-wrap">
+              <button class="btn btn-primary rounded-5">Primary</button>
+              <button class="btn btn-secondary rounded-5">Secondary</button>
+              <button class="btn btn-success rounded-5">Success</button>
+              <button class="btn btn-danger rounded-5">Danger</button>
+              <button class="btn btn-warning rounded-5">Warning</button>
+              <button class="btn btn-info rounded-5">Info</button>
+              <button class="btn btn-light rounded-5">Light</button>
+              <button class="btn btn-dark rounded-5">Dark</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="card shadow-sm">
+            <div class="card-header"><h5 class="card-title mb-0">Icon Buttons</h5></div>
+            <div class="card-body d-flex gap-2 flex-wrap">
+              <button class="btn btn-primary"><i class="fa-solid fa-house me-1"></i>With Text</button>
+              <button class="btn btn-secondary"><i class="fa-solid fa-file"></i></button>
+              <button class="btn btn-success"><i class="fa-solid fa-heart"></i></button>
+              <button class="btn btn-danger"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+              <button class="btn btn-warning"><i class="fa-solid fa-circle-exclamation"></i></button>
+              <button class="btn btn-info"><i class="fa-solid fa-address-book"></i></button>
+              <button class="btn btn-light"><i class="fa-solid fa-circle"></i></button>
+              <button class="btn btn-dark"><i class="fa-solid fa-notes-medical"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="card shadow-sm">
+            <div class="card-header"><h5 class="card-title mb-0">Button Groups</h5></div>
+            <div class="card-body d-flex gap-3 flex-wrap">
+              <div class="btn-group">
+                <button class="btn btn-primary">Left</button>
+                <button class="btn btn-primary">Middle</button>
+                <button class="btn btn-primary">Right</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-danger">Left</button>
+                <button class="btn btn-success">Middle</button>
+                <button class="btn btn-warning">Right</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-outline-primary">Left</button>
+                <button class="btn btn-outline-primary">Middle</button>
+                <button class="btn btn-outline-primary">Right</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="card shadow-sm">
+            <div class="card-header"><h5 class="card-title mb-0">Outline Buttons</h5></div>
+            <div class="card-body d-flex gap-2 flex-wrap">
+              <button class="btn btn-outline-primary">Primary</button>
+              <button class="btn btn-outline-secondary">Secondary</button>
+              <button class="btn btn-outline-success">Success</button>
+              <button class="btn btn-outline-danger">Danger</button>
+              <button class="btn btn-outline-warning">Warning</button>
+              <button class="btn btn-outline-info">Info</button>
+              <button class="btn btn-outline-light">Light</button>
+              <button class="btn btn-outline-dark">Dark</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="card shadow-sm">
+            <div class="card-header"><h5 class="card-title mb-0">Button Sizes</h5></div>
+            <div class="card-body d-flex gap-2 flex-wrap align-items-center">
+              <button class="btn btn-primary btn-sm">Small</button>
+              <button class="btn btn-secondary">Normal</button>
+              <button class="btn btn-success btn-lg">Large</button>
+              <button class="btn btn-outline-danger btn-sm">Small</button>
+              <button class="btn btn-outline-warning">Normal</button>
+              <button class="btn btn-outline-info btn-lg">Large</button>
+              <button class="w-100 btn btn-primary mt-2">Block Button</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="card shadow-sm">
+            <div class="card-header"><h5 class="card-title mb-0">Button States</h5></div>
+            <div class="card-body d-flex gap-2 flex-wrap">
+              <button class="btn btn-primary">Normal</button>
+              <button class="btn btn-primary" disabled>Disabled</button>
+              <button class="btn btn-outline-primary">Normal</button>
+              <button class="btn btn-outline-primary" disabled>Disabled</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-            offcanvas.addEventListener("show.bs.offcanvas", function () {
-                body.classList.add("offcanvas-open");
-            });
-
-            offcanvas.addEventListener("hide.bs.offcanvas", function () {
-                body.classList.remove("offcanvas-open");
-            });
-        </script>
-    </body>
+    <footer class="page-footer">
+      <p>© Copyright <strong>NiceAdmin</strong>. All Rights Reserved</p>
+      <p>Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></p>
+    </footer>
+  </div>
+</div>
+<script>
+  const sidebarToggle = document.getElementById('sidebarToggle');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebar-overlay');
+  sidebarToggle.addEventListener('click', () => { sidebar.classList.toggle('show'); overlay.classList.toggle('show'); });
+  overlay.addEventListener('click', () => { sidebar.classList.remove('show'); overlay.classList.remove('show'); });
+</script>
+</body>
 </html>
